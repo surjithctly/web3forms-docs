@@ -6,3 +6,7 @@ Web3Forms is a simple tool to setup Contact Forms for Static Websites. Receive f
 
 Start this documentation by clicking the links below or choose your topic from the left side.
 
+{% page-ref page="getting-started/customizations/" %}
+
+
+
