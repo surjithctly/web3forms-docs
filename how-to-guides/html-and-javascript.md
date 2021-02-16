@@ -1,10 +1,10 @@
 # HTML & JavaScript
 
-Sometimes you want to use JavaScript to submit the form and its possible with Web3Forms. If you use JavaScript, you can keep users on the same page instead of redirecting to other page. Also you will be able to code custom form validation or integration with other tools / services. 
+Sometimes you want to use JavaScript to submit the form and its possible with Web3Forms. If you use JavaScript, you can keep users on the same page instead of redirecting to other page. Also you will be able to code custom form validation or integration with other tools / services.
 
-The initial steps are same as [Pure HTML](../getting-started/installation.md#step-01-get-access-key). Be sure to check to know how to create Access Key.  Then use the following sample code to get started. Modify it according to your needs. 
+The initial steps are same as [Pure HTML](../getting-started/installation.md#step-01-get-access-key). Be sure to check to know how to create Access Key. Then use the following sample code to get started. Modify it according to your needs.
 
-### HTML
+## HTML
 
 ```markup
 <form method="POST" id="form">
@@ -26,7 +26,7 @@ The initial steps are same as [Pure HTML](../getting-started/installation.md#ste
 </form>
 ```
 
-### JavaScript
+## JavaScript
 
 ```javascript
 const form = document.getElementById('form');

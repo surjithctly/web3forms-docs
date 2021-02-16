@@ -1,7 +1,5 @@
 # API Reference
 
-
-
 {% api-method method="post" host="https://api.web3canvas.com" path="/submit" %}
 {% api-method-summary %}
 Form Submission
@@ -23,25 +21,25 @@ User Email, This will be used to set reply to address. So its easy to follow-up.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="subject" type="string" required=false %}
-Email Subject. It can be submitted by user or prefilled using `hidden` attribute. 
+Email Subject. It can be submitted by user or prefilled using `hidden` attribute.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="ccemail" type="string" required=false %}
-PRO: Add your co-workers to your email notification.  Available for PRO users only. 
+PRO: Add your co-workers to your email notification. Available for PRO users only.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="replyto" type="string" required=false %}
-Reply to Email. If you don't want to use `email` as replyto, you can assign a custom email here. 
+Reply to Email. If you don't want to use `email` as replyto, you can assign a custom email here.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="redirect" type="string" required=false %}
-URL: You can use a custom URL to redirect to a page when the form submits successfully.   
-`NOTE:   
+URL: You can use a custom URL to redirect to a page when the form submits successfully.  
+`NOTE:    
 Only recommended when using without JavaScript`
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="botcheck" type="boolean" required=false %}
-  Hidden: To prevent Spam Submissions. Make sure its hidden by adding `display:none;`
+Hidden: To prevent Spam Submissions. Make sure its hidden by adding `display:none;`
 {% endapi-method-parameter %}
 {% endapi-method-form-data-parameters %}
 {% endapi-method-request %}
@@ -52,7 +50,7 @@ Only recommended when using without JavaScript`
 Form Submitted Successfully
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
    "statusCode":200,
    "success":true,
@@ -63,7 +61,6 @@ Form Submitted Successfully
       "message":"Email sent successfully!"
    }
 }
-
 ```
 {% endapi-method-response-example %}
 
@@ -72,7 +69,7 @@ Form Submitted Successfully
 Could not complete the request due to client error!
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
    "statusCode":400,
    "success":false,
@@ -83,7 +80,6 @@ Could not complete the request due to client error!
       "message":"Error Description"
    }
 }
-
 ```
 {% endapi-method-response-example %}
 
@@ -92,7 +88,7 @@ Could not complete the request due to client error!
 Something wrong happened in the server!
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
    "statusCode":500,
    "success":false,

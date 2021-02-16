@@ -1,12 +1,12 @@
 # Installation
 
-### Step 01: Get Access Key
+## Step 01: Get Access Key
 
 First step is to get an Access Key from Web3Forms. [Create Access Key](https://web3forms.com/#start)
 
-Once you submit the form, you will get the Access key in your Email. Copy that key so that we can use this later. 
+Once you submit the form, you will get the Access key in your Email. Copy that key so that we can use this later.
 
-### Step 2: Create HTML Form
+## Step 2: Create HTML Form
 
 Create a form in your website with our form endpoint inside action attribute. Following is a simple example on how it should look like:
 
@@ -48,7 +48,7 @@ Create a form in your website with our form endpoint inside action attribute. Fo
 
     <!-- Required: if submitting without Javascript 
          (because by default web3form outputs json) -->
-         
+
     <!-- If javascript, use "window.location.hash" for redirects -->
     <input type="hidden" name="redirect" value="https://web3forms.com/success">
 
@@ -73,7 +73,7 @@ Create a form in your website with our form endpoint inside action attribute. Fo
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Add your Access Key
+## Step 3: Add your Access Key
 
 Add your access key to start receiving email submissions.
 
@@ -81,7 +81,7 @@ Add your access key to start receiving email submissions.
 <input type="hidden" name="apikey" value="YOUR_ACCESS_KEY_HERE">
 ```
 
-### Step 4: Done
+## Step 4: Done
 
-That's it. Run your code on a browser and it should work. This is a simple starting example. However you can customize it with unlimited possibilities. Checkout other pages to know more. 
+That's it. Run your code on a browser and it should work. This is a simple starting example. However you can customize it with unlimited possibilities. Checkout other pages to know more.
 

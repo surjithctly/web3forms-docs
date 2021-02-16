@@ -4,9 +4,9 @@ description: Prevent bots and spammers using your forms to send emails.
 
 # SPAM Protection
 
-### `botcheck`
+## `botcheck`
 
-Bots and Spam Submissions are prevented using Honeypot Spam Prevention method. By now, these bots are getting advanced, so we have made sure to add some extra layer of protection for this Honeypot. This will stop most bots from submitting your form. 
+Bots and Spam Submissions are prevented using Honeypot Spam Prevention method. By now, these bots are getting advanced, so we have made sure to add some extra layer of protection for this Honeypot. This will stop most bots from submitting your form.
 
 {% hint style="info" %}
 Honeypot is optional to include, however we recommend adding this if you are not using the [reCaptcha Integration](../pro-features/recaptcha-integration.md)
@@ -27,6 +27,4 @@ By default, Web3Forms outputs JSON data, This will become less user friendly if 
 {% hint style="info" %}
 The Input type should be `hidden` and the name should be `redirect`
 {% endhint %}
-
-
 

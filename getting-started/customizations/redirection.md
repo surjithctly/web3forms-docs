@@ -4,7 +4,7 @@ description: Customize Success Redirection to another page
 
 # Success Redirection
 
-### `redirect`
+## `redirect`
 
 {% hint style="danger" %}
 This can be only used if you are using the HTML Only Form.
@@ -21,6 +21,4 @@ By default, Web3Forms outputs JSON data, This will become less user friendly if 
 {% hint style="info" %}
 The Input type should be `hidden` and the name should be `redirect`
 {% endhint %}
-
-
 
