@@ -6,6 +6,14 @@ Web3Forms is a simple tool to setup Contact Forms for Static Websites. Receive f
 
 Start this documentation by clicking the links below or choose your topic from the left side.
 
+{% hint style="warning" %}
+This documentation is work in progress. Feel free to [contribute on Github](https://github.com/surjithctly/web3forms-docs).
+{% endhint %}
+
+{% hint style="info" %}
+Styling is achieved with [Tailwind CSS](https://tailwindcss.com).
+{% endhint %}
+
 {% page-ref page="getting-started/customizations/" %}
 
 

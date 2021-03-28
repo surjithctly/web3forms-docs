@@ -34,8 +34,7 @@ Reply to Email. If you don't want to use `email` as replyto, you can assign a cu
 
 {% api-method-parameter name="redirect" type="string" required=false %}
 URL: You can use a custom URL to redirect to a page when the form submits successfully.  
-`NOTE:    
-Only recommended when using without JavaScript`
+`NOTE: Only recommended when using without JavaScript`
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="botcheck" type="boolean" required=false %}
@@ -50,7 +49,7 @@ Hidden: To prevent Spam Submissions. Make sure its hidden by adding `display:non
 Form Submitted Successfully
 {% endapi-method-response-example-description %}
 
-```text
+```json
 {
    "statusCode":200,
    "success":true,
@@ -62,6 +61,7 @@ Form Submitted Successfully
    }
 }
 ```
+
 {% endapi-method-response-example %}
 
 {% api-method-response-example httpCode=400 %}
@@ -69,7 +69,7 @@ Form Submitted Successfully
 Could not complete the request due to client error!
 {% endapi-method-response-example-description %}
 
-```text
+```json
 {
    "statusCode":400,
    "success":false,
@@ -81,6 +81,7 @@ Could not complete the request due to client error!
    }
 }
 ```
+
 {% endapi-method-response-example %}
 
 {% api-method-response-example httpCode=500 %}
@@ -88,7 +89,7 @@ Could not complete the request due to client error!
 Something wrong happened in the server!
 {% endapi-method-response-example-description %}
 
-```text
+```json
 {
    "statusCode":500,
    "success":false,
@@ -100,8 +101,8 @@ Something wrong happened in the server!
    }
 }
 ```
+
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
