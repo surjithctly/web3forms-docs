@@ -15,7 +15,9 @@ Styling is achieved with [Tailwind CSS](https://tailwindcss.com).
 {% endhint %}
 
 {% page-ref page="getting-started/" %}
+
 {% page-ref page="getting-started/customizations/" %}
+
 {% page-ref page="how-to-guides/" %}
 
 
