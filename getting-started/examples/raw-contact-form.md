@@ -1,10 +1,10 @@
-# Raw Contact Form (No CSS)
+# Raw Contact Form
 
 [Check it out on Codepen](https://codepen.io/surjithctly/pen/WNRwwdx)
 
 ## HTML
 
-```html
+```markup
 <!-- 
     =======================================================================
 
@@ -95,3 +95,4 @@ button {
   width: 100%;
 }
 ```
+

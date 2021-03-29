@@ -48,7 +48,6 @@ Hidden. To prevent Spam Submissions. Make sure its hidden by adding `display:non
 {% api-method-parameter name="webhook" type="string" required=false %}
 **PRO feature:** Hidden. Trigger a webhook when form is submitted.
 {% endapi-method-parameter %}
-
 {% endapi-method-form-data-parameters %}
 {% endapi-method-request %}
 
@@ -58,7 +57,7 @@ Hidden. To prevent Spam Submissions. Make sure its hidden by adding `display:non
 Form Submitted Successfully
 {% endapi-method-response-example-description %}
 
-```json
+```javascript
 {
    "statusCode":200,
    "success":true,
@@ -70,7 +69,6 @@ Form Submitted Successfully
    }
 }
 ```
-
 {% endapi-method-response-example %}
 
 {% api-method-response-example httpCode=400 %}
@@ -78,7 +76,7 @@ Form Submitted Successfully
 Could not complete the request due to client error!
 {% endapi-method-response-example-description %}
 
-```json
+```javascript
 {
    "statusCode":400,
    "success":false,
@@ -90,7 +88,6 @@ Could not complete the request due to client error!
    }
 }
 ```
-
 {% endapi-method-response-example %}
 
 {% api-method-response-example httpCode=500 %}
@@ -98,7 +95,7 @@ Could not complete the request due to client error!
 Something wrong happened in the server!
 {% endapi-method-response-example-description %}
 
-```json
+```javascript
 {
    "statusCode":500,
    "success":false,
@@ -110,8 +107,8 @@ Something wrong happened in the server!
    }
 }
 ```
-
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+

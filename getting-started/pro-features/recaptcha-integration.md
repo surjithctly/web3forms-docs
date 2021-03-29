@@ -8,7 +8,7 @@ Heads Up! This is a PRO feature. You must have an active membership to use this 
 
 To setup, first you should register your domain on Google reCaptcha  and generate API keys from their website. Go to [reCaptcha Website](https://www.google.com/recaptcha/admin/create) to create new keys. Choose reCaptcha v3 from the option. Add your domain name and submit to create your keys. You will need both Site Key and Secret Key. Copy those code and save it in your notepad. We will need this later. 
 
-![Registering reCaptcha](../../.gitbook/assets/image%20%284%29.png)
+![Registering reCaptcha](../../.gitbook/assets/image%20%284%29%20%282%29.png)
 
 Now go to [https://web3forms.com/pro](https://web3forms.com/pro) page and add your reCaptcha Secret Key and save the form. 
 

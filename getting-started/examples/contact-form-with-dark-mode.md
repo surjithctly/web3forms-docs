@@ -4,7 +4,7 @@
 
 ## HTML
 
-```html
+```markup
 <!-- 
     =======================================================================
 
@@ -106,7 +106,7 @@
 
 ## Javascript
 
-```js
+```javascript
 const form = document.getElementById("form");
 const result = document.getElementById("result");
 
@@ -153,3 +153,4 @@ form.addEventListener("submit", function (e) {
     });
 });
 ```
+

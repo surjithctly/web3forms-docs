@@ -2,11 +2,11 @@
 
 ## Requirements
 
-You will need to add [@nuxtjs/axios](https://axios.nuxtjs.org/setup) and [@nuxtjs/tailwindcss](https://tailwindcss.nuxtjs.org/setup) (optional) to your Nuxt application.
+You will need to add [@nuxtjs/axios](https://axios.nuxtjs.org/setup) and [@nuxtjs/tailwindcss](https://tailwindcss.nuxtjs.org/setup) \(optional\) to your Nuxt application.
 
 ## Vue file
 
-```html
+```markup
 <template>
   <!-- 
     =======================================================================
@@ -183,3 +183,4 @@ export default {
 };
 </script>
 ```
+
