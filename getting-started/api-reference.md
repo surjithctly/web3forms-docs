@@ -40,6 +40,15 @@ URL. You can use a custom URL to redirect to a page when the form submits succes
 {% api-method-parameter name="botcheck" type="boolean" required=false %}
 Hidden. To prevent Spam Submissions. Make sure its hidden by adding `display:none;`
 {% endapi-method-parameter %}
+
+{% api-method-parameter name="attachment" type="file" required=false %}
+**PRO feature:** Send a file.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="webhook" type="string" required=false %}
+**PRO feature:** Hidden. Trigger a webhook when form is submitted.
+{% endapi-method-parameter %}
+
 {% endapi-method-form-data-parameters %}
 {% endapi-method-request %}
 
