@@ -6,7 +6,7 @@ You will need to add [@nuxtjs/axios](https://axios.nuxtjs.org/setup) and [@nuxtj
 
 ## Vue file
 
-```vue
+```html
 <template>
   <!-- 
     =======================================================================
