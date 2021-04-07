@@ -38,7 +38,7 @@ You will need to add [@nuxtjs/axios](https://axios.nuxtjs.org/setup) and [@nuxtj
               type="checkbox"
               name="botcheck"
               id=""
-              style="display: none;"
+              style="display: none"
             />
             <div class="mb-6">
               <label
@@ -114,9 +114,12 @@ You will need to add [@nuxtjs/axios](https://axios.nuxtjs.org/setup) and [@nuxtj
               </button>
             </div>
             <p
-              :class="`text-base text-center text-${'gray': status === '',
-              'green': status === 'success',
-              'red': status === 'error'}-${status === '' ? '400' : '500'}`"
+              :class="`text-base text-center 
+
+              ${status === 'success' ? 'text-green-500' : ''}
+               ${status === 'error' ? 'text-red-500' : ''}
+               ${status === '' ? 'text-gray-4500' : ''}
+               `"
             >
               {{ result }}
             </p>
@@ -128,13 +131,15 @@ You will need to add [@nuxtjs/axios](https://axios.nuxtjs.org/setup) and [@nuxtj
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   data() {
     return {
       form: {
         apikey: "YOUR_ACCESS_KEY_HERE",
         subject: "New Submission from Web3Forms",
-        redirect: "https://web3forms.com/success",
+
         name: "",
         email: "",
         phone: "",
@@ -145,16 +150,20 @@ export default {
     };
   },
   methods: {
-    async sumbitForm(e) {
+    async submitForm(e) {
       this.result = "Please wait...";
-      this.$axios.setHeader("Content-Type", "application/json");
-      this.$axios.setHeader("Accept", "application/json");
-      await this.$axios
-        .$post("https://api.web3forms.com/submit", this.form)
+      axios.create({
+        headers: { "Content-Type": "application/json" },
+      });
+      await axios
+        .post("https://api.web3forms.com/submit", this.form)
         .then(async (response) => {
-          let json = await response.json();
-          this.result = json.message;
-          if (response.status == 200) {
+          //let json = await response.json();
+          //this.result = json.message;
+          console.log(response);
+          this.result = response.data.message;
+
+          if (response.status === 200) {
             this.status = "success";
           } else {
             console.log(response);
