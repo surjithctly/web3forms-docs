@@ -8,7 +8,7 @@ Once you submit the form, you will get the Access key in your Email. Copy that k
 
 ## Step 2: Create HTML Form
 
-Create a form in your website with our form endpoint inside action attribute. Following is a simple example on how it should look like:
+Create a form in your website with our form endpoint inside action attribute. Read more [getting-started/installation](https://docs.web3forms.com/getting-started/installation) Following is a simple example on how it should look like:
 
 {% tabs %}
 {% tab title="Basic Example" %}
