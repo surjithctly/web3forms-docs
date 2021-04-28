@@ -1,4 +1,4 @@
-# Vercel
+# Netlify
 
 ## Step 01: Create HTML Form
 
