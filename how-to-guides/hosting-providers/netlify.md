@@ -44,7 +44,7 @@ You will now be able to see your repos. Just click on the repository you want to
 
 You can now add your details, Finally lets click on **Deploy Site** button and you're good to go!
 
-## Step 09: Congratulations! You're App is depoyed
+## Step 09: Congratulations! You're App is deployed
 
 ![](./assets/netlify/netlify-congrats.png)
 

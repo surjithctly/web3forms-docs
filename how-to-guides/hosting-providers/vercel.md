@@ -42,7 +42,7 @@ Now, you can see your repos, click on **Import** button near the repo you want t
 
 Configure you name and settings. Click on **Deploy** button. You're good to go!
 
-## Step 09: Congratulations! You're App is depoyed
+## Step 09: Congratulations! You're App is deployed
 
 ![](./assets/vercel/congrats.png)
 
