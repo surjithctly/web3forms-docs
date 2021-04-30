@@ -1,22 +1,16 @@
 # React JS
 
-# Basic HTML Contact Form
+# Basic React App
 
-[Check it out on Codepen](https://codepen.io/surjithctly/pen/ZELQggB)
+[Check it out on CodeSandBox](https://codesandbox.io/s/web3forms-react-example-tp63f)
 
 ## App.js
 
-```markup
-<!--
-    =======================================================================
+```js
 
-    This is a working contact form. To receive email,
-    Replace YOUR_ACCESS_KEY_HERE with your actual Access Key.
-
-    Create Access Key here 👉 https://web3forms.com/
-
-    =======================================================================
- -->
+// This is a working contact form. To receive email,
+// Replace YOUR_ACCESS_KEY_HERE with your actual Access Key.
+// Create Access Key here 👉 https://web3forms.com/
 
 import React from "react";
 import "./App.css";
@@ -43,7 +37,7 @@ const App = () => {
               <input
                 type="hidden"
                 name="apikey"
-                value="f3c8a81b-342c-4466-a957-ca4be288eb2b"
+                value="YOUR_API_KEY"
               />
               <input
                 type="hidden"
