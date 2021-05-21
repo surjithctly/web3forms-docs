@@ -6,7 +6,7 @@ First of all we need to create a `html` page with web3forms. Learn how to setup 
 
 ## Step 02: Create an account on Github
 
-![](./assets/github/github.png)
+![](../../.gitbook/assets/github.png)
 
 First Step is to create a Github account if you don't already have one.
 
@@ -16,7 +16,7 @@ Now, you should create a new GitHub repository and add your `html` files to your
 
 ## Step 04: Create an account on Vercel
 
-![](./assets/vercel/vercel.png)
+![](../../.gitbook/assets/vercel.png)
 
 The next Step is to create an account on [vercel.com](https://vercel.com/) or you can login to Vercel. You can make use of login with Github. This will make it easy to connect your repository.
 
@@ -26,34 +26,33 @@ Now, click [New Project](https://vercel.com/new) button from your dashboard.
 
 ## Step 06: Import GIT Repository to Vercel
 
-![](./assets/vercel/import-git-repo.png)
+![](../../.gitbook/assets/import-git-repo.png)
 
 Now, you can see your repos, click on **Import** button near the repo you want to import.
 
 ## Step 07: Set Vercel Scope
 
-![](./assets/vercel/vercel-scope.png)
+![](../../.gitbook/assets/vercel-scope.png)
 
 Now, you can see your repos, click on **Import** button near the repo you want to import.
 
 ## Step 08: Deploy Vercel App
 
-![](./assets/vercel/deploy-vercel.png)
+![](../../.gitbook/assets/deploy-vercel.png)
 
 Configure you name and settings. Click on **Deploy** button. You're good to go!
 
 ## Step 09: Congratulations! You're App is deployed
 
-![](./assets/vercel/congrats.png)
+![](../../.gitbook/assets/congrats.png)
 
 Congrats, You're app is now deployed on vercel. You can now visit it! It will work absolutely fine. Well done! 👏
 
 ## Test App
 
-![](./assets/web3forms/app-live.png)
+![](../../.gitbook/assets/app-live.png)
 
 Now, here comes the final part! It is time to test. Head over to the app, and submit the form. Open your mail, you can see a new one. It will look like this 👇
 
-![](./assets/web3forms/email.png)
+![](../../.gitbook/assets/email.png)
 
-{% endhint %}

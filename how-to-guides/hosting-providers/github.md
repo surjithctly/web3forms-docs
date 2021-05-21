@@ -6,7 +6,7 @@ First of all we need to create a `html` page with web3forms. Learn how to setup 
 
 ## Step 02: Create an account on Github
 
-![](./assets/github/github.png)
+![](../../.gitbook/assets/github.png)
 
 First Step is to create a Github account if you don't already have one.
 
@@ -29,34 +29,33 @@ git push -u origin main
 
 ## Step 05: Go to Settings
 
-![](./assets/github/github-repo.png)
+![](../../.gitbook/assets/github-repo.png)
 
 On your github repository, you can see a tab called **Settings**, just click on the tab.
 
 ## Step 06: Go to Pages Table
 
-![](./assets/github/github-pages.png)
+![](../../.gitbook/assets/github-pages.png)
 
 On your settings page, you can see a tab called **Pages** on the left. Just click on tab.
 
 ## Step 07: Choose Branch
 
-![](./assets/github/github-branch.png)
+![](../../.gitbook/assets/github-branch.png)
 
 Here, you can should set your branch as `main` and click on **Save** button. You're good to go!
 
 ## Step 08: Congratulations! You're App is deployed
 
-![](./assets/github/site-published.png)
+![](../../.gitbook/assets/site-published.png)
 
 Congrats, You're app is now deployed on github. Your hosting url will be _username.github.io/repo_ You can now visit it! It will work absolutely fine. Well done! 👏
 
 ## Test App
 
-![](./assets/web3forms/app-live.png)
+![](../../.gitbook/assets/app-live.png)
 
 Now, here comes the final part! It is time to test. Head over to the app, and submit the form. Open your mail, you can see a new one. It will look like this 👇
 
-![](./assets/web3forms/email.png)
+![](../../.gitbook/assets/email.png)
 
-{% endhint %}
