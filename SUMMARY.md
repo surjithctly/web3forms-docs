@@ -11,6 +11,7 @@
   * [SPAM Protection](getting-started/customizations/spam-protection/README.md)
     * [Report Spam](getting-started/customizations/spam-protection/report-spam.md)
   * [Custom Reply-To](getting-started/customizations/custom-reply-to.md)
+  * [From Name](getting-started/customizations/from-name.md)
 * [Pro Features](getting-started/pro-features/README.md)
   * [reCaptcha Integration](getting-started/pro-features/recaptcha-integration.md)
   * [Add CC Email](getting-started/pro-features/add-cc-email.md)
