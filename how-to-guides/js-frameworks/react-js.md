@@ -63,7 +63,7 @@ export default function ContactForm() {
           <form onSubmit={handleSubmit(onSubmit)}>
             <input
               type="hidden"
-              value="c00d70af-1ca3-466d-98a7-c82408e76e91"
+              value="YOUR_ACCESS_KEY_HERE"
               {...register("apikey")}
             />
             <input
