@@ -29,10 +29,10 @@ export function Contact() {
   }
 
   return (
-    <div className={styles.containerContact}>
+    <div>
       <div>
         <div>
-          <div className="title">
+          <div>
             <h1>CONTACT</h1>
           </div>
 
