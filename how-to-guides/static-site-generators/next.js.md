@@ -30,24 +30,20 @@ export function Contact() {
 
   return (
     <>
-      <div>
-          <h1>CONTACT</h1>
-      </div>
-
       <form onSubmit={handleSubmit}>
           <div>
-              <label htmlFor="">NAME</label>
-              <input type="text" name="name" required placeholder="What is your name" />
+              <label htmlFor="name">Name</label>
+              <input type="text" name="name" required placeholder="Your name" />
           </div>
           <div>
-              <label htmlFor="">E-MAIL</label>
-              <input type="email" name="email" required placeholder="Ex. name@email.com" />
+              <label htmlFor="email">Email</label>
+              <input type="email" name="email" required placeholder="email@example.com" />
           </div>
           <div>
-              <label htmlFor="">MESSAGE</label>
-              <textarea name="message" required rows="3" placeholder="Write your message here"></textarea>
+              <label htmlFor="message">Message</label>
+              <textarea name="message" required rows="3" placeholder="Enter Message"></textarea>
           </div>
-          <button type="submit">SEND</button>
+          <button type="submit">Submit Form</button>
       </form>
     </>
   );
