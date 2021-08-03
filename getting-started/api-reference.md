@@ -6,7 +6,7 @@ Form Submission
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to submit form submissions. Currently accepts the following options as Form Data. These names are reserved so you should not use these names for your custom form input names.
+This endpoint allows you to submit form submissions. The following are the reserved names that will trigger form functions. You may use any other names in your forms as you need and it will be forwarded to your email as-is. 
 {% endapi-method-description %}
 
 {% api-method-spec %}
