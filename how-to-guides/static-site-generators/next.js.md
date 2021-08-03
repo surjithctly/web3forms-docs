@@ -1,7 +1,6 @@
 # Next.js
----
-Simple example using in Next.js
----
+
+## Simple example using in Next.js
 
 A simple example of implementing Web3Forms in a Next.js project. You can see an advanced version using [react-hook-form here](https://docs.web3forms.com/how-to-guides/js-frameworks/react-js)
 

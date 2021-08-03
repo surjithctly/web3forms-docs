@@ -1,6 +1,6 @@
 # API Reference
 
-{% api-method method="post" host="https://api.web3canvas.com" path="/submit" %}
+{% api-method method="post" host="https://api.web3forms.com" path="/submit" %}
 {% api-method-summary %}
 Form Submission
 {% endapi-method-summary %}
