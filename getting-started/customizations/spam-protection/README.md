@@ -15,10 +15,12 @@ Honeypot is optional to include, however we recommend adding this if you are not
 See the code below.
 
 ```markup
-<input type="checkbox" name="botcheck" id="" style="display: none;">
+<input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 ```
 
 {% hint style="info" %}
-The Input type should be `hidden` and the name should be `redirect`
+The Input type should be `checkbox` and the name should be `botcheck`
 {% endhint %}
+
+
 
