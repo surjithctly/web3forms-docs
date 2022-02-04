@@ -31,7 +31,7 @@
       </div>
       <div class="m-7">
         <form action="https://api.web3forms.com/submit" method="POST" id="form">
-          <input type="hidden" name="apikey" value="YOUR_ACCESS_KEY_HERE" />
+          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
           <input
             type="hidden"
             name="subject"
@@ -186,4 +186,3 @@ form.addEventListener("submit", function (e) {
     });
 });
 ```
-

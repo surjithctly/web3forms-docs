@@ -4,9 +4,9 @@ description: React contact form example using react-hook-form plugin
 
 # React JS
 
-Here's a sample React Contact Form built with `react-hook-form` plugin. See [Plugin docs here](https://react-hook-form.com/).
+Here's a sample React Contact Form built with `react-hook-form` plugin. See [Plugin docs here](https://react-hook-form.com).
 
-This example uses TailwindCSS for styling. You may use your own if needed. 
+This example uses TailwindCSS for styling. You may use your own if needed.&#x20;
 
 ```jsx
 import React from "react";
@@ -64,7 +64,7 @@ export default function ContactForm() {
             <input
               type="hidden"
               value="YOUR_ACCESS_KEY_HERE"
-              {...register("apikey")}
+              {...register("access_key")}
             />
             <input
               type="hidden"
@@ -249,4 +249,3 @@ export default function ContactForm() {
   );
 }
 ```
-

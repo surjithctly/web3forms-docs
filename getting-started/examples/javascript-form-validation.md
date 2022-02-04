@@ -37,7 +37,7 @@
           class="needs-validation"
           novalidate
         >
-          <input type="hidden" name="apikey" value="YOUR_ACCESS_KEY_HERE" />
+          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
           <input
             type="hidden"
             name="subject"
@@ -269,4 +269,3 @@
   });
 })();
 ```
-

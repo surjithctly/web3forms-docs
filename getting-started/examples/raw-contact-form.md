@@ -19,7 +19,7 @@
 <form action="https://api.web3forms.com/submit" method="POST" id="form">
   <fieldset>
     <legend>Contact Form</legend>
-    <input type="hidden" name="apikey" value="YOUR_ACCESS_KEY_HERE" />
+    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
     <input type="hidden" name="subject" value="New Submission from Web3Forms" />
     <input
       type="hidden"
@@ -95,4 +95,3 @@ button {
   width: 100%;
 }
 ```
-

@@ -15,7 +15,7 @@ Create a form in your website with our form endpoint inside action attribute. Fo
 ```markup
 <form action="https://api.web3forms.com/submit" method="POST">
 
-    <input type="hidden" name="apikey" value="YOUR_ACCESS_KEY_HERE">
+    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
 
     <input type="text" name="name" required>
     <input type="email" name="email" required>
@@ -34,11 +34,15 @@ Create a form in your website with our form endpoint inside action attribute. Fo
     <!-- REQUIRED: Your Access key here. Don't worry this can be public -->
     <!-- Create your Access key here: https://web3forms.com/ -->
     <!-- <input type="hidden" name="apikey" value="YOUR_ACCESS_KEY_HERE"> -->
-    <input type="hidden" name="apikey" value="YOUR_ACCESS_KEY_HERE">
+    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
 
     <!-- Optional: Can be type="hidden" or type="text" for subject -->
     <input type="hidden" name="subject" value="New Submission from Web3Forms">
-
+  
+    <!-- Optional: From Name you want to see in the email
+          Default is "Notifications". you can overwrite here -->
+    <input type="hidden" name="from_name" value="Your Website Name">
+  
     <!-- Optional: To send the form submission as CC email -->
     <input type="hidden" name="ccemail" value="partner@example.com">
 
@@ -55,9 +59,17 @@ Create a form in your website with our form endpoint inside action attribute. Fo
     <!-- Optional: But Recommended: To Prevent SPAM Submission. 
          Make sure its hidden by default -->
     <input type="checkbox" name="botcheck" id="" style="display: none;">
+    
+    <!-- Webhooks: Send your form data to Notion, Google Sheets or Zapier.
+         This feature available to PRO & Starter Plan users only -->
+    <input type="hidden" name="webhook" value="WEBHOOK_URL_HERE" />
 
     <!-- Google reCaptcha v3: To Prevent SPAM Submission.PRO Plan only -->
     <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+    
+    <!-- Attachments: Make sure the <form> has enctype="multipart/form-data"
+         This feature available to PRO Plan users only -->
+    <input type="file" name="attachment" />
 
     <!-- Custom Form Data: 
      Then you can include your own form data you wish to receive in email. -->
@@ -84,4 +96,3 @@ Add your access key to start receiving email submissions.
 ## Step 4: Done
 
 That's it. Run your code on a browser and it should work. This is a simple starting example. However you can customize it with unlimited possibilities. Checkout other pages to know more.
-

@@ -2,7 +2,7 @@
 
 ## Requirements
 
-The following example uses [@nuxtjs/axios](https://axios.nuxtjs.org/setup) and [@nuxtjs/tailwindcss](https://tailwindcss.nuxtjs.org/setup) \(optional\) to make it work.
+The following example uses [@nuxtjs/axios](https://axios.nuxtjs.org/setup) and [@nuxtjs/tailwindcss](https://tailwindcss.nuxtjs.org/setup) (optional) to make it work.
 
 ## Vue file
 
@@ -137,7 +137,7 @@ export default {
   data() {
     return {
       form: {
-        apikey: "YOUR_ACCESS_KEY_HERE",
+        access_key: "YOUR_ACCESS_KEY_HERE",
         subject: "New Submission from Web3Forms",
 
         name: "",
@@ -192,4 +192,3 @@ export default {
 };
 </script>
 ```
-

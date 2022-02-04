@@ -15,7 +15,7 @@ export function Contact() {
                 Accept: "application/json",
             },
             body: JSON.stringify({
-                apikey: "YOUR_ACCESS_KEY_HERE",
+                access_key: "YOUR_ACCESS_KEY_HERE",
                 name: e.target.name.value,
                 email: e.target.email.value,
                 message: e.target.message.value,
@@ -48,4 +48,3 @@ export function Contact() {
   );
 }
 ```
-

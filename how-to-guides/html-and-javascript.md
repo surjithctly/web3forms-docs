@@ -9,7 +9,7 @@ The initial steps are same as [Pure HTML](../getting-started/installation.md#ste
 ```markup
 <form method="POST" id="form">
 
-    <input type="hidden" name="apikey" value="YOUR_ACCESS_KEY_HERE">
+    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
     <input type="hidden" name="subject" value="New Submission from Web3Forms">
     <input type="checkbox" name="botcheck" id="" style="display: none;">
 
@@ -71,4 +71,3 @@ form.addEventListener('submit', function(e) {
         });
 });
 ```
-
