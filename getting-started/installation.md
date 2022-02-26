@@ -85,6 +85,10 @@ Create a form in your website with our form endpoint inside action attribute. Fo
 {% endtab %}
 {% endtabs %}
 
+{% hint style="info" %}
+Make sure you added \`name\` attribute, form action URL and the \`access\_key\` to make the form work as expected &#x20;
+{% endhint %}
+
 ## Step 3: Add your Access Key
 
 Add your access key to start receiving email submissions.
