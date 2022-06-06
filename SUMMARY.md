@@ -41,6 +41,7 @@
 * [HTML & JavaScript](how-to-guides/html-and-javascript.md)
 * [JS Frameworks](how-to-guides/js-frameworks/README.md)
   * [React JS](how-to-guides/js-frameworks/react-js.md)
+  * [React Plugin](how-to-guides/js-frameworks/react-plugin.md)
   * [Vue JS](how-to-guides/js-frameworks/vue-js.md)
   * [Svelte](how-to-guides/js-frameworks/svelte.md)
   * [Angular JS](how-to-guides/js-frameworks/angular-js.md)
@@ -74,4 +75,3 @@
 * [WordPress](how-to-guides/wordpress/README.md)
   * [Elementor](how-to-guides/wordpress/elementor.md)
   * [Oxygen Builder](how-to-guides/wordpress/oxygen-builder.md)
-
