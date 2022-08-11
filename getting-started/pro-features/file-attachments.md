@@ -53,7 +53,9 @@ form.addEventListener("submit", function (e) {
     alert("Please upload file less than 1 MB");
     return;
   }
-
+  
+  // Don't add `headers` or `content-type` in this fetch call
+  // Since it contains attachments, the browser auto-adds them. 
   fetch("https://api.web3forms.com/submit", {
     method: "POST",
     body: formData
