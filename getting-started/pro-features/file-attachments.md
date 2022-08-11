@@ -22,6 +22,8 @@ You will need to add `enctype="multipart/form-data"` to the Form Element to make
 If you are using Javascript / Ajax to submit the form, make sure you set the Headers accordingly. Setting wrong headers will throw an error.&#x20;
 {% endhint %}
 
+## File upload with Javascript&#x20;
+
 #### Here's an example code with Javascript
 
 ```html
