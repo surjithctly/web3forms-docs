@@ -39,8 +39,12 @@ If you are using Javascript / Ajax to submit the form, make sure you set the Hea
 const form = document.getElementById("myForm");
 
 form.addEventListener("submit", function (e) {
-  const formData = new FormData(form);
   e.preventDefault();
+  
+  const formData = new FormData(form);
+  
+  formData.append("apikey", "YOUR_ACCESS_KEY_HERE");
+  formData.append("subject", "New Submission from Web3Forms");
 
   const file = document.getElementById("attachment");
   const filesize = file.files[0].size / 1024;
