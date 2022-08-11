@@ -4,7 +4,7 @@ description: React contact form example using react-hook-form plugin
 
 # React JS
 
-Here's a sample React Contact Form built with `react-hook-form` plugin. See [Plugin docs here](https://react-hook-form.com).
+Here's a sample React Contact Form built with `react-hook-form` plugin. See [Plugin docs here](https://react-hook-form.com/).
 
 This example uses TailwindCSS for styling. You may use your own if needed.&#x20;
 
@@ -16,6 +16,7 @@ export default function ContactForm() {
   const {
     register,
     handleSubmit,
+    setValue,
     reset,
     control,
     formState: { errors, isSubmitSuccessful, isSubmitting },
@@ -25,7 +26,13 @@ export default function ContactForm() {
   const [isSuccess, setIsSuccess] = React.useState(false);
   const [Message, setMessage] = React.useState("");
 
-  const userName = useWatch({ control, name: "name", defaultValue: "Someone" });
+  const userName = useWatch({ 
+    control, 
+    name: "name", 
+    defaultValue: "Someone" 
+  });
+  
+  setValue("subject", `${userName} sent a message from Website`);
 
   const onSubmit = async (data, e) => {
     console.log(data);
@@ -68,7 +75,6 @@ export default function ContactForm() {
             />
             <input
               type="hidden"
-              value={`${userName} sent a message from Mission Control`}
               {...register("subject")}
             />
             <input
