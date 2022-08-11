@@ -43,7 +43,7 @@ form.addEventListener("submit", function (e) {
   
   const formData = new FormData(form);
   
-  formData.append("apikey", "YOUR_ACCESS_KEY_HERE");
+  formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
   formData.append("subject", "New Submission from Web3Forms");
 
   const file = document.getElementById("attachment");
