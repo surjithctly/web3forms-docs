@@ -29,7 +29,7 @@ If you are using Javascript / Ajax to submit the form, make sure you set the Hea
 ```html
 <form id="myForm" method="POST">
   ...
-  <input type="file" name="attachment" />
+  <input type="file" id="attachment" name="attachment" />
   ...  
   <button type="submit">Submit Form</button>
 </form>
