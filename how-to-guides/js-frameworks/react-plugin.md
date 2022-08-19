@@ -1,4 +1,4 @@
-# React Plugin
+# Web3Forms React Plugin
 
 Our community has created a react plugin to send form submissions easily using Web3Forms.&#x20;
 
