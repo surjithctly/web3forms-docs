@@ -4,23 +4,12 @@ description: Prevent bots and spammers using your forms to send emails.
 
 # SPAM Protection
 
-## `botcheck`
+Web3Forms provides variety of spam prevention methods.&#x20;
 
-Bots and Spam Submissions are prevented using the Honeypot Spam Prevention method. By now, these bots are getting advanced, so we have made sure to add some extra layer of protection for this Honeypot. This will stop most bots from submitting your form.
+First of all, we do run a server-side spam check on all form submissions. So even if you have not implemented any client side spam check, you will receive less spam because of our server side spam check.&#x20;
 
-{% hint style="info" %}
-Honeypot is optional to include, however we recommend adding this if you are not using the [reCaptcha Integration](../../pro-features/recaptcha-integration.md)
-{% endhint %}
+However, to block more spam, we recommend adding one of the following server side spam check. Please click on each guide to see more detailed instructions.&#x20;
 
-See the code below.
-
-```markup
-<input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-```
-
-{% hint style="info" %}
-The Input type should be `checkbox` and the name should be `botcheck`
-{% endhint %}
-
-
-
+* [hCaptcha](hcaptcha.md)&#x20;
+* [Honeypot](spam-protection.md)
+* [Google reCaptcha](../../pro-features/recaptcha-integration.md) (Pro only)
