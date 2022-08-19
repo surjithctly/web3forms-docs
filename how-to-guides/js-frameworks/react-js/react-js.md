@@ -2,7 +2,7 @@
 description: React contact form example using react-hook-form plugin
 ---
 
-# React JS
+# React Hook Form
 
 Here's a sample React Contact Form built with `react-hook-form` plugin. See [Plugin docs here](https://react-hook-form.com/).
 
