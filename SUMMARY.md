@@ -25,7 +25,7 @@
   * [Javascript Form Validation](getting-started/examples/javascript-form-validation.md)
   * [Contact Form with Dark Mode](getting-started/examples/contact-form-with-dark-mode.md)
   * [Raw Contact Form](getting-started/examples/raw-contact-form.md)
-  * [reCaptcha v3](getting-started/examples/recaptcha-v3.md)
+  * [Google reCaptcha v3](getting-started/examples/recaptcha-v3.md)
   * [File Upload Form](getting-started/examples/file-upload-form.md)
 * [Integrations](getting-started/integrations/README.md)
   * [Zapier](getting-started/integrations/zapier.md)
