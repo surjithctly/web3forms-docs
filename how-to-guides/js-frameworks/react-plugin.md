@@ -1,18 +1,28 @@
 # Web3Forms React Plugin
 
-Our community has created a react plugin to send form submissions easily using Web3Forms.&#x20;
+We have an official Web3Forms React Plugin to help you send form submissions easily using Web3Forms & React, Next.js etc.&#x20;
 
-[use-web3forms](https://www.npmjs.com/package/use-web3forms) is a react hook that is available to download from [npm](https://www.npmjs.com/package/use-web3forms) and the source on [github](https://github.com/Lalit2005/use-web3forms). This plugin is made & maintained by Lalit.&#x20;
+[@web3forms/react](https://www.npmjs.com/package/@web3forms/react) is available to download from [npm](https://www.npmjs.com/package/@web3forms/react) and the source on [github](https://github.com/web3forms/web3forms-react).&#x20;
 
 The following example shows how you can create a working contact form using this react hook.&#x20;
 
+First, install the plugin from NPM:
+
+```bash
+npm install @web3forms/react
+# or
+yarn add @web3forms/react
+```
+
+Then, Import the Plugin & add the following code.&#x20;
+
 {% code title="contact.js" %}
 ```jsx
-// This example uses `use-web3forms` plugin and tailwindcss for css styling
+// This example uses `@web3forms/react` plugin and tailwindcss for css styling
 
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import useWeb3Forms from "use-web3forms";
+import useWeb3Forms from "@web3forms/react";
 
 export default function Contact() {
   const {
@@ -33,9 +43,11 @@ export default function Contact() {
   const apiKey = process.env.PUBLIC_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE";
 
   const { submit: onSubmit } = useWeb3Forms({
-    apikey: apiKey,
-    from_name: "Acme Inc",
-    subject: "New Contact Message from your Website",
+    access_key: apiKey,
+    settings: {
+      from_name: "Acme Inc",
+      subject: "New Contact Message from your Website",
+    },
     onSuccess: (msg, data) => {
       setIsSuccess(true);
       setMessage(msg);
