@@ -52,3 +52,26 @@ We recommend adding **hCaptcha** if you don't mind showing the above captcha box
 ```
 
 If you add just two lines to your contact form, you will get a working hCaptcha to protect your form.&#x20;
+
+### Client Side Validation
+
+Use this snippet if you are using the HTML form-embedded method without Javascript to check whether the hCaptcha is filled or not.&#x20;
+
+Add this code block just above the closing of \</body> and make sure `YOUR_FORM_ID` is updated with your form id.&#x20;
+
+```html
+<script>
+const form = document.getElementById('YOUR_FORM_ID');
+
+form.addEventListener('submit', function(e) {
+
+    const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+    if (!hCaptcha) {
+        e.preventDefault();
+        alert("Please fill out captcha field")
+        return
+    }
+});
+</script>
+```
