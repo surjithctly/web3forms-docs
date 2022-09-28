@@ -4,8 +4,7 @@ In this guide, you will learn how to setup a simple working contact form using R
 
 Here's the code:
 
-```jsx
-import React from "react";
+<pre class="language-jsx"><code class="lang-jsx">import React from "react";
 
 function App() {
   const [result, setResult] = React.useState("");
@@ -32,18 +31,17 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h1>React File Upload Form</h1>
-      <form onSubmit={onSubmit}>
-        <input type="text" name="name"/>
-        <input type="email" name="email"/>
-        <textarea name="message"></textarea>
-        <input type="submit" />
-      </form>
-      <span>{result}</span>
-    </div>
+    &#x3C;div className="App">
+      &#x3C;h1>React File Upload Form&#x3C;/h1>
+      &#x3C;form onSubmit={onSubmit}>
+        &#x3C;input type="text" name="name"/>
+<strong>        &#x3C;input type="email" name="email"/>
+</strong>        &#x3C;textarea name="message">&#x3C;/textarea>
+        &#x3C;input type="submit" />
+      &#x3C;/form>
+      &#x3C;span>{result}&#x3C;/span>
+    &#x3C;/div>
   );
 }
 
-export default App;
-```
+export default App;</code></pre>
