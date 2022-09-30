@@ -53,6 +53,7 @@
   * [Vue JS](how-to-guides/js-frameworks/vue-js.md)
   * [Svelte](how-to-guides/js-frameworks/svelte.md)
   * [Angular JS](how-to-guides/js-frameworks/angular-js.md)
+  * [Alpine.js](how-to-guides/js-frameworks/alpine.js.md)
 * [Site Builders](how-to-guides/site-builders/README.md)
   * [Wix](how-to-guides/site-builders/wix.md)
   * [Squarespace](how-to-guides/site-builders/squarespace.md)

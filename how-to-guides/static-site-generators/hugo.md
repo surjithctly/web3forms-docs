@@ -1,6 +1,16 @@
 # Hugo
 
-{% hint style="warning" %}
-This documentation is work in progress. Feel free to [contribute on Github](https://github.com/surjithctly/web3forms-docs).
-{% endhint %}
+Here's a working contact form example for Hugo with Web3Forms
 
+```markup
+<form action="https://api.web3forms.com/submit" method="POST">
+
+    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+    <input type="text" name="name" required>
+    <input type="email" name="email" required>
+    <textarea name="message" required></textarea>
+    <button type="submit">Submit Form</button>
+
+</form>
+```

@@ -1,6 +1,3 @@
 # Angular JS
 
-{% hint style="warning" %}
-This documentation is work in progress. Feel free to [contribute on Github](https://github.com/surjithctly/web3forms-docs).
-{% endhint %}
-
+Web3Forms will work fine in Angular.js. You just need to send proper request to our API URL. Currently example code is unavailable.&#x20;
