@@ -1,59 +1,24 @@
 # Nuxt.js
 
-Here's a simple Contact form Working Example for Nuxt.js with Web3Forms
-
-```markup
-<template>
-    <form @submit.prevent="submitForm">
-      <input type="text" name="name" v-model="name"/>
-      <input type="email" name="email"  v-model="email"/>
-      <textarea name="message" v-model="message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </template>
-
-  <script>
-  const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
-
-  export default {
-    data() {
-      return {
-        name: "",
-        email: "",
-        message: "",
-      };
-    },
-    methods: {
-      async submitForm() {
-        const response = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify({
-            access_key: WEB3FORMS_ACCESS_KEY,
-            name: this.name,
-            email: this.email,
-            message: this.message,
-          }),
-        });
-        const result = await response.json();
-        if (result.success) {
-          console.log(result);
-        }
-      },
-    },
-  };
-  </script>
-```
-
-## Advanecd Example
+## Requirements
 
 The following example uses [@nuxtjs/axios](https://axios.nuxtjs.org/setup) and [@nuxtjs/tailwindcss](https://tailwindcss.nuxtjs.org/setup) (optional) to make it work.
 
+## Vue file
+
 ```markup
-<template> 
+<template>
+  <!-- 
+    =======================================================================
+
+    This is a working contact form. To receive email, 
+    Replace YOUR_ACCESS_KEY_HERE with your actual Access Key.
+
+    Create Access Key here 👉 https://web3forms.com/
+
+    =======================================================================
+ -->
+
   <div class="flex items-center min-h-screen bg-gray-50 dark:bg-gray-900">
     <div class="container mx-auto">
       <div class="max-w-md mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
