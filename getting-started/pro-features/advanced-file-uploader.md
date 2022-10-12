@@ -6,6 +6,10 @@ description: >-
 
 # Advanced File Uploader
 
+{% hint style="info" %}
+Heads Up! This is a PRO feature. You must have an active membership to use this feature.
+{% endhint %}
+
 Our Default HTML5 File Uploader only supports file attachments up to 5 MB. Also currently it does not support multiple files. If you need to upload large files or multiple files, use our advanced file uploader.
 
 **Step 1: Add a hidden \<input> inside your form with \`**data-fileupload**\` attribute**
@@ -25,10 +29,6 @@ Our Default HTML5 File Uploader only supports file attachments up to 5 MB. Also 
 <! -- Step 2: Add the Web3Forms script -->
 <script src="https://web3forms.com/client/script.js" async defer></script>
 ```
-
-{% hint style="info" %}
-Heads Up! This is a PRO feature. You must have an active membership to use this feature.
-{% endhint %}
 
 ### Full Code
 
@@ -51,6 +51,10 @@ Heads Up! This is a PRO feature. You must have an active membership to use this 
 
 If you add just two lines to your contact form, you will get an advanced file upload form.&#x20;
 
+{% hint style="info" %}
+Note: You do not need to use `multipart/form-data` if you are using our advanced file uploader. You can just use the normal method.&#x20;
+{% endhint %}
+
 ### File Upload Options
 
 You may also pass many options to the file upload using data-\* attributes. Here are some of the following:
@@ -65,3 +69,26 @@ You may also pass many options to the file upload using data-\* attributes. Here
 | `data-text-color`       | `#FFFFFF`       | File Upload button text color. Values in Hex                     |
 
 Our File Upload API is powered by [UploadCare](https://uploadcare.com/). So you can also add any `data-*` attributes supported by them. [See more available options here](https://uploadcare.com/docs/uploads/file-uploader-options/)
+
+
+
+### Client Side Validation
+
+Use this snippet to make file upload a required filed and to validate if the file is uploaded or not.&#x20;
+
+Add the following code block just above the closing of \</body> and make sure `YOUR_FORM_ID` is updated with your form id.&#x20;
+
+<pre class="language-html"><code class="lang-html"><strong>&#x3C;script>
+</strong><strong>const form = document.getElementById('YOUR_FORM_ID');
+</strong>
+form.addEventListener('submit', function(e) {
+
+    const fileInput = form.querySelector('[data-fileupload="true"]').value;
+
+    if (!fileInput) {
+        e.preventDefault();
+        alert("Please upload files first!")
+        return
+    }
+});
+&#x3C;/script></code></pre>
