@@ -19,6 +19,7 @@
   * [Add CC Email](getting-started/pro-features/add-cc-email.md)
   * [Autoresponder](getting-started/pro-features/autoresponder.md)
   * [File Attachments](getting-started/pro-features/file-attachments.md)
+  * [Advanced File Uploader](getting-started/pro-features/advanced-file-uploader.md)
   * [Webhooks](getting-started/pro-features/webhooks.md)
 * [Examples](getting-started/examples/README.md)
   * [Basic HTML Contact Form](getting-started/examples/basic-html-contact-form.md)

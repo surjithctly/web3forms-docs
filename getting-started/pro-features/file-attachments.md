@@ -22,6 +22,10 @@ You will need to add `enctype="multipart/form-data"` to the Form Element to make
 If you are using Javascript / Ajax to submit the form, make sure you set the Headers accordingly. Setting wrong headers will throw an error.&#x20;
 {% endhint %}
 
+### Advanced File Uploader
+
+Our Default HTML5 File uploader works only for single files up to 5 MB only. To upload multiple files or larger attachments, we recommend using our Advanced File Uploader. [Please see the guide here](file-attachments.md#undefined)
+
 ## File upload with Javascript&#x20;
 
 #### Here's an example code with Javascript
