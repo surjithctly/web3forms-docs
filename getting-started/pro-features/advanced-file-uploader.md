@@ -30,6 +30,12 @@ Our Default HTML5 File Uploader only supports file attachments up to 5 MB. Also 
 <script src="https://web3forms.com/client/script.js" async defer></script>
 ```
 
+### Live Demo on Codepen
+
+{% embed url="https://codepen.io/surjithctly/pen/NWMeJzQ" %}
+[https://codepen.io/surjithctly/pen/NWMeJzQ](https://codepen.io/surjithctly/pen/NWMeJzQ)
+{% endembed %}
+
 ### Full Code
 
 ```html
