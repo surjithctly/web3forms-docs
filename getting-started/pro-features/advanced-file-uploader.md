@@ -84,9 +84,10 @@ Use this snippet to make file upload a required filed and to validate if the fil
 
 Add the following code block just above the closing of \</body> and make sure `YOUR_FORM_ID` is updated with your form id.&#x20;
 
-<pre class="language-html"><code class="lang-html"><strong>&#x3C;script>
-</strong><strong>const form = document.getElementById('YOUR_FORM_ID');
-</strong>
+```html
+<script>
+const form = document.getElementById('YOUR_FORM_ID');
+
 form.addEventListener('submit', function(e) {
 
     const fileInput = form.querySelector('[data-fileupload="true"]').value;
@@ -97,4 +98,5 @@ form.addEventListener('submit', function(e) {
         return
     }
 });
-&#x3C;/script></code></pre>
+</script>
+```
