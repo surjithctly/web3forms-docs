@@ -40,7 +40,7 @@ Heads Up! This is a PRO feature. You must have an active membership to use this 
     <textarea name="message" required></textarea>
     
     <! -- Step 1: Add this line -->
-    <input type="hidden" data-fileupload="true" />
+    <input type="hidden" data-fileupload="true" data-maxsize="2" data-images-only="true" />
     
     <button type="submit">Submit Form</button>
 </form>
@@ -55,12 +55,13 @@ If you add just two lines to your contact form, you will get an advanced file up
 
 You may also pass many options to the file upload using data-\* attributes. Here are some of the following:
 
-| Data Attribute          | Default Value   | Description                                                              |
-| ----------------------- | --------------- | ------------------------------------------------------------------------ |
-| `data-multiple`         | `false`         | Add this as `data-multiple="true"` if you want to allow multiple files.  |
-| `data-maxsize`          | `NA`            | Maximum File Size in MB. eg: `"10"` for 10 MB `"0.5"` for 500 KB         |
-| `data-button-text`      | `Upload a File` | File Upload Button Text                                                  |
-| `data-background-color` | `#2a2a2a`       | File Upload button background color. Values in Hex                       |
-| `data-text-color`       | `#FFFFFF`       | File Upload button text color. Values in Hex                             |
+| Data Attribute          | Default Value   | Description                                                      |
+| ----------------------- | --------------- | ---------------------------------------------------------------- |
+| `data-multiple`         | `false`         | Set to `true` if you want to allow multiple files.               |
+| `data-maxsize`          | `NA`            | Maximum File Size in MB. eg: `"10"` for 10 MB `"0.5"` for 500 KB |
+| `data-images-only`      | `false`         | Set to `true` to allow only image files.                         |
+| `data-button-text`      | `Upload a File` | File Upload Button Text                                          |
+| `data-background-color` | `#2a2a2a`       | File Upload button background color. Values in Hex               |
+| `data-text-color`       | `#FFFFFF`       | File Upload button text color. Values in Hex                     |
 
 Our File Upload API is powered by [UploadCare](https://uploadcare.com/). So you can also add any `data-*` attributes supported by them. [See more available options here](https://uploadcare.com/docs/uploads/file-uploader-options/)
