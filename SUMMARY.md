@@ -40,6 +40,7 @@
     * [Telegram Notifications](getting-started/integrations/examples/telegram-notifications.md)
 * [Options Reference](getting-started/options-reference.md)
 * [API Reference](getting-started/api-reference.md)
+* [Troubleshooting](getting-started/troubleshooting.md)
 
 ## How-to Guides
 
