@@ -100,3 +100,53 @@ form.addEventListener('submit', function(e) {
 });
 </script>
 ```
+
+## React & React Hook Form
+
+If you are using React with React Hook form, The attachment field might not send properly. To set up, use the following method.&#x20;
+
+You can use the Web3Forms Public Key (as shown below) or create your own from UploadCare if you want to store data.&#x20;
+
+```jsx
+import { useForm, Controller } from "react-hook-form";
+import { Widget } from "@uploadcare/react-widget";
+
+export default function Support() {
+  const { register, handleSubmit } = useForm({
+    mode: "onTouched",
+  });
+
+  const onSubmit = async (data, e) => {
+    // Replace with actual call to Web3Forms
+    console.log(data);
+  };
+
+  const css = `.uploadcare--widget__button.uploadcare--widget__button_type_open {
+  background-color: #dfdfdf;
+  color:  #444444;
+  }`;
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <input type="text" {...register("name")} />
+      <Controller
+        control={control}
+        name="attachment"
+        render={({ field }) => (
+          <Widget
+            publicKey="a0e4fd45fb9d5fed7599"
+            name="attachment"
+            multiple
+            systemDialog
+            onChange={(e) => field.onChange(e.cdnUrl)}
+            previewStep="true"
+          />
+        )}
+      />
+      <style>{css}</style>
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+
+```
