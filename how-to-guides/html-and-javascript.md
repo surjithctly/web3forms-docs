@@ -33,14 +33,11 @@ const form = document.getElementById('form');
 const result = document.getElementById('result');
 
 form.addEventListener('submit', function(e) {
-    const formData = new FormData(form);
-    e.preventDefault();
-    var object = {};
-    formData.forEach((value, key) => {
-        object[key] = value
-    });
-    var json = JSON.stringify(object);
-    result.innerHTML = "Please wait..."
+  e.preventDefault();
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  result.innerHTML = "Please wait..."
 
     fetch('https://api.web3forms.com/submit', {
             method: 'POST',

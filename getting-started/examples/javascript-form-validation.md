@@ -218,14 +218,11 @@
           /*
            * Form Submission using fetch()
            */
-
-          const formData = new FormData(form);
           event.preventDefault();
           event.stopPropagation();
-          const object = {};
-          formData.forEach((value, key) => {
-            object[key] = value;
-          });
+          
+          const formData = new FormData(form);
+          const object = Object.fromEntries(formData);
           const json = JSON.stringify(object);
           result.innerHTML = "Please wait...";
 
