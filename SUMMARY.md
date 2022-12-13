@@ -7,7 +7,7 @@
 * [Installation](getting-started/installation.md)
 * [Customizations](getting-started/customizations/README.md)
   * [Email Subject line](getting-started/customizations/email-subject.md)
-  * [Success Redirection](getting-started/customizations/redirection.md)
+  * [Custom Redirection](getting-started/customizations/redirection.md)
   * [SPAM Protection](getting-started/customizations/spam-protection/README.md)
     * [hCaptcha](getting-started/customizations/spam-protection/hcaptcha.md)
     * [Honeypot](getting-started/customizations/spam-protection/spam-protection.md)
