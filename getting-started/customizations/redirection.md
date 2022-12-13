@@ -7,9 +7,9 @@ description: Customize Success Redirection to your website after form submission
 ## `redirect`
 
 {% hint style="danger" %}
-This can be only used if you are using the HTML Only Form.
+This can be only used if you are using the Default HTML Form without Javascript.
 
-If you are using JavaScript or any other front-end Technology, Please use their redirection method instead. [See Javascript Example](../../how-to-guides/html-and-javascript.md)
+If you are using JavaScript or any other front-end Technology, Please use appropriate redirection method instead. [See Javascript Example](../../how-to-guides/html-and-javascript.md)
 {% endhint %}
 
 By default, Web3Forms redirects to our website after form submission, However if you have a custom URL on your website if you want to redirect after a successful form redirection, you can use the `redirect` option. You can set any URL you want. This could be a page on your website or a different website. See the code below. Make sure its an absolute URL with `https://` not relative.&#x20;
