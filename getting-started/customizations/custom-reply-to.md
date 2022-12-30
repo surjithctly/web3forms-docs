@@ -14,26 +14,27 @@ However, If you want to add a custom `replyto` email address, you can use the fo
 
 **Here's an example with full code:**
 
-<pre class="language-markup"><code class="lang-markup"><strong>&#x3C;!-- // Default Form. Here, `email` is used as `replyto` -->
-</strong>
-&#x3C;form action="https://api.web3forms.com/submit" method="POST">
-    &#x3C;input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-    &#x3C;input type="text" name="name" required>
-    &#x3C;!-- replyto set by this input. usually, it's the user who submits the form.  -->
-    &#x3C;input type="email" name="email" required>
-    &#x3C;button type="submit">Submit Form&#x3C;/button>
-&#x3C;/form>
+```markup
+<!-- // Default Form. Here, `email` is used as `replyto` -->
+
+<form action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+    <input type="text" name="name" required>
+    <!-- replyto set by this input. usually, it's the user who submits the form.  -->
+    <input type="email" name="email" required>
+    <button type="submit">Submit Form</button>
+</form>
 
 
-&#x3C;!-- // Custom `replyto` Form -->
+<!-- // Custom `replyto` Form -->
 
-&#x3C;form action="https://api.web3forms.com/submit" method="POST">
-    &#x3C;input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-    &#x3C;!-- `replyto` email will be the given value.  -->
-    &#x3C;input type="hidden" name="replyto" value="custom@gmail.com" />
-    &#x3C;input type="text" name="name" required>
-    &#x3C;input type="email" name="email" required>
-    &#x3C;button type="submit">Submit Form&#x3C;/button>
-&#x3C;/form>
+<form action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+    <!-- `replyto` email will be the given value.  -->
+    <input type="hidden" name="replyto" value="custom@gmail.com" />
+    <input type="text" name="name" required>
+    <input type="email" name="email" required>
+    <button type="submit">Submit Form</button>
+</form>
 
-</code></pre>
+```
