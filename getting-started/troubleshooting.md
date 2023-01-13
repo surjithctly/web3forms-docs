@@ -4,6 +4,12 @@ description: Here are common issues with Web3Forms and how to fix them.
 
 # Troubleshooting
 
+## Form submitted successfully but email not received
+
+Form Submission Emails are sent instantly and will reach your inbox in seconds. In rare cases, it can take up to 1-2 minutes. Even if you don't receive any email after waiting, please make sure you check the "Promotions" or "Updates" tab if you are using Gmail. Otherwise, you can check the "Spam/Junk" folder once to confirm the email is landed there.&#x20;
+
+Once you have received the email, it is recommended to drag the email to your Primary Inbox and press "YES" when asked if you want to mark future emails as important. So all future emails from our `notify+{hash}@web3forms.com` will reach your primary inbox.&#x20;
+
 ## Email received without any data
 
 Ensure you have added a `name` attribute to each of your form elements. Form data is processed only if `name` attribute is present in the formData.&#x20;
