@@ -50,9 +50,43 @@ Web3Forms supports two types of Content-Type
 
 The first one is used by the browser automatically when submitting the form using the default HTML Method, There is nothing you need to configure and it works as expected in modern browsers.&#x20;
 
-The `application/json` is however to be used while sending the formData from Javascript or from your framework. So the server will return `application/json` to the client as well. Now you can show success message based on the return json.&#x20;
+The `application/json` is however to be used while sending the formData from Javascript or from your framework. So the server will return `application/json` to the client as well. Now you can show success message based on the return json or redirect to another page.&#x20;
 
 ### How to fix the CORS Error in Web3Forms?
+
+#### **301 Redirect Cors Error**
+
+If you are using the javascript method to send the form, you should not use `redirect` in the HTML form. You should remove that and add the redirect inside the javascript success callback using `window.location.href`
+
+```html
+// ❌ Wrong
+
+<form id="javascript_form" method="POST">
+     ...
+    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+     ...
+</form> 
+
+
+
+// ✅ Correct
+
+<form id="javascript_form" method="POST">
+     ... 
+</form> 
+
+<script>
+// ...
+.then(async (response) => {
+  let json = await response.json();
+  if (response.status == 200) {
+      window.location.href = "success.html" // <-- add this line
+  }
+// ...   
+</script>
+```
+
+#### Mixed Content-Type Error
 
 The CORS error usually happens when you mix javascript and form-urlencoded together.&#x20;
 
@@ -95,5 +129,5 @@ If you got this error and you think it's a mistake, please contact support for f
 
 Our server protects from spam attacks for our users. But occasionally, it might happen while testing the form. This is usually because some test words we use might trigger our spam server. So to fix it, make sure you add input data as natural as possible.&#x20;
 
-If issue persists, please contact support.&#x20;
+If issue persists, please [contact support](https://web3forms.com/help?contact=true).&#x20;
 
