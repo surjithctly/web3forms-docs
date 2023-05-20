@@ -15,7 +15,7 @@ Angular basics:
 - Let's assume that you already initialized your app and you have your component that has the form.
 
 1. Create a service (_<u>**mail**</u>_)
-```
+```JS
 ng generate service services/mail
 ```
 - define a method called (_<u>**sendEmail()**</u>_) that will return a _Promise_ and accept a parameter (<u>**_formData_**</u>) that has type of (_<u>**FormData**</u>_).
@@ -31,7 +31,23 @@ ng generate service services/mail
 
 - our _**<u>service mail</u>**_ method should look like:
 
-<img width="668" alt="angular service method to send Web3Forms emails" src="https://github.com/surjithctly/web3forms-docs/assets/78637183/e798321e-84dc-4451-a4c0-fd6225d42aee">
+```JS
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class MailService {
+  constructor() {}
+
+  sendEmail(formData: FormData): Promise<Response> {
+    return fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData,
+    });
+  }
+}
+```
 
 - that's it for the _**<u>mail service</u>**_.
 
@@ -39,11 +55,103 @@ ng generate service services/mail
 
 - Now let's take a look at the HTML **_<u>form</u>_**:
 
-_We splitted the Form HTML code into 2 images for a better view as well as we are you using TailwindCSS for styling_
+_We are you using TailwindCSS for styling_
 
-<img width="668" alt="angular HTML form part 1" src="https://github.com/surjithctly/web3forms-docs/assets/78637183/9bf71113-daff-4b33-8a0f-4328f4b99a17"> 
-
-<img width="668" alt="angular HTML form part 2" src="https://github.com/surjithctly/web3forms-docs/assets/78637183/1245cccc-3fb9-4eed-b9b7-134f0ae36515">
+```JS
+<!-- Form -->
+<div class="mt-8">
+<form
+  class="flex flex-col gap-3"
+  #contactForm="ngForm"
+  (ngSubmit)="submitEmail(contactForm)"
+>
+  <!-- Name field -->
+  <div>
+    <input
+      name="name"
+      [(ngModel)]="contactFormValues.name"
+      #name="ngModel"
+      type="text"
+      placeholder="Full Name"
+      class="w-full p-2 border border-gray-200 rounded-md"
+      required
+      minlength="2"
+    />
+    <!-- input error message -->
+    <p
+      class="ml-1 text-red-400 text-sm"
+      *ngIf="name.errors && name.touched && name.dirty"
+    >
+      name is required
+    </p>
+  </div>
+  <!-- email field -->
+  <div>
+    <input
+      name="email"
+      [(ngModel)]="contactFormValues.email"
+      #email="ngModel"
+      type="email"
+      placeholder="Email"
+      class="w-full p-2 border border-gray-200 rounded-md"
+      required
+      pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+    />
+    <!-- input error message -->
+    <p
+      class="ml-1 text-red-400 text-sm"
+      *ngIf="email.errors && email.touched && email.dirty"
+    >
+      invalid email
+    </p>
+  </div>
+  <!-- body field -->
+  <div>
+    <textarea
+      name="body"
+      [(ngModel)]="contactFormValues.body"
+      #body="ngModel"
+      cols="30"
+      rows="10"
+      class="w-full p-2 border border-gray-200 rounded-md"
+      placeholder="Message"
+      required
+      minlength="20"
+    ></textarea>
+    <!-- input error message -->
+    <p
+      class="ml-1 text-red-400 text-sm"
+      *ngIf="body.errors && body.touched && body.dirty"
+    >
+      at least write some words (20 characters length)
+    </p>
+  </div>
+  <!-- Alert -->
+  <div
+    [ngClass]="{
+      hidden: !showAlert
+    }"
+  >
+    <p [ngClass]="alertColor" class="font-semibold">
+      {{ alertMessage }}
+    </p>
+  </div>
+  <!-- submit button -->
+  <button
+    [disabled]="contactForm.invalid || onSubmit"
+    class="p-2 rounded-md font-bold uppercase text-white bg-light-color hover:bg-primary-color transition disabled:opacity-50 disabled:bg-light-color"
+  >
+    <ng-container *ngIf="onSubmit === false; else submittingEmail">
+      send
+    </ng-container>
+    <ng-template #submittingEmail>
+      <div class="animate-spin">
+        <fa-icon [icon]="iconLoad"></fa-icon>
+      </div>
+    </ng-template>
+  </button>
+</form>
+```
 
 - As you can see we are assigning the values of the inputs to an object in our component class (<u>_**<u>contactFormValues</u>**_</u>) with the help of **_<u>template forms</u>_**, and we have a button being used to submit the form as well as we have (<u>_**<u>ng-container</u>**_</u>) and (<u>_**<u>ng-template</u>**_)</u> inside the button tag to display whether the text (**_send_**) or show a spinning animated (_**icon**_) that indicates the form is being submitted.
 
@@ -51,11 +159,67 @@ _We splitted the Form HTML code into 2 images for a better view as well as we ar
 
 > - Class properties:
 
-<img width="668" alt="angular component class properties" src="https://github.com/surjithctly/web3forms-docs/assets/78637183/1e3b76ca-fbdf-4ed3-a4af-51985d2ee2de">
+```JS
+  constructor(
+    private mailService: MailService
+  ) {}
 
+  private color: string = '';
+  showAlert: boolean = false;
+  alertMessage: string = '';
+  onSubmit: boolean = false;
+  iconLoad = faArrowRotateForward;
+  contactFormValues = {
+    name: '',
+    email: '',
+    body: '',
+  };
+```
 > - Class methods:
 
-<img width="668" alt="angular component class methods" src="https://github.com/surjithctly/web3forms-docs/assets/78637183/7ce07746-7134-4c1c-9295-63f90dbe133b">
+```JS
+get alertColor() {
+  return `text-${this.color}-400`;
+}
+
+hideAlert() {
+  setTimeout(() => {
+    this.showAlert = false;
+  }, 5000);
+}
+
+async submitEmail(contactForm: NgForm) {
+  this.onSubmit = true;
+  // -- set formData values
+  let formData: FormData = new FormData();
+  formData.append('name', this.contactFormValues.name);
+  formData.append('email', this.contactFormValues.email);
+  formData.append('body', this.contactFormValues.body);
+  // -- email customization
+  formData.append('access_key', environment.form_access_key);
+  formData.append('subject', 'Email Support From Your Site');
+  formData.append('from_name', 'Contact Notification');
+
+  try {
+    // -- send email
+    const res = await this.mailService.sendEmail(formData);
+    if (!res.ok) {
+      throw new Error();
+    }
+    this.alertMessage = 'Email sent successfully!';
+    this.color = 'green';
+    contactForm.reset();
+  } catch (err) {
+    // handle error
+    this.alertMessage = 'Something went wrong, try again later!';
+    this.color = 'red';
+  }
+  // -- reset submit and hide alert
+  this.onSubmit = false;
+  this.showAlert = true;
+  this.hideAlert();
+}
+```
 
 ## Class properties explanation:
 
@@ -68,13 +232,12 @@ _We splitted the Form HTML code into 2 images for a better view as well as we ar
 - `iconLoad = faArrowRotateForward;` To define and rename the icon from (fontAwesome library).
 
 - contactFormValues
-```
-contactFormValues = {
+`contactFormValues = {
     name: '',
     email: '',
     body: '',
-  };
-```
+  };`
+ 
  To hold the inputs' values with the help of the template forms of Angular.
 
 ## Class methods explanation:
