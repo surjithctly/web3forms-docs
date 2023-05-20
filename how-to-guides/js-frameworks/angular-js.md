@@ -5,23 +5,9 @@ We use Web3Forms for the needlessness of a back-end server, so no need to set-up
 
 ## prerequisites
 
-- Web3Forms **_access key_**.
-
-- Angular basics (_**Services**_, **_TemplateForms_**).
-
----
-
-## Let's create our access key:
-
-- first we have to submit the email that we are going to receive emails on.
-
-<img width="718" alt="register Web3Forms access key" src="https://github.com/surjithctly/web3forms-docs/assets/78637183/ea7f1ea4-92b4-440b-bcb0-e2aa0fa9ded7">
-
-- once we submit it and finish the steps, we are going to receive the access key in our email that we registered with.
-
-<img width="668" alt="email Web3Forms notification for access key" src="https://github.com/surjithctly/web3forms-docs/assets/78637183/f6c7113a-a30f-43f9-bcd1-adb4b1dc1800">
-
-- now register your access key here: [Web3Forms](https://web3forms.com/#start)
+Angular basics:
+- **_Services_**
+- **_TemplateForms_**
 
 ---
 
@@ -52,6 +38,7 @@ ng generate service services/mail
 ---
 
 - Now let's take a look at the HTML **_<u>form</u>_**:
+
 _We splitted the Form HTML code into 2 images for a better view as well as we are you using TailwindCSS for styling_
 
 <img width="668" alt="angular HTML form part 1" src="https://github.com/surjithctly/web3forms-docs/assets/78637183/9bf71113-daff-4b33-8a0f-4328f4b99a17"> 
@@ -96,8 +83,8 @@ contactFormValues = {
 
 - `submitEmail(contactForm)` An async function that accepts an instance of the **_<u>NgForm</u>_** to handle the submit form and in this method let's explain 3 parts of it:
 
-1. Creating a formData instance and add values because it is the way that _Web3Forms_ accepts the form. 
- - `formData.append('name', this.contactFormValues.name);` add input value (_**name**_) from template to formData, follow the same step to add other inputs' values.
+1. Create a formData instance and append values (contactFormValues) because it is the way that _Web3Forms_ accepts the form. 
+ - `formData.append('name', this.contactFormValues.name);` add input value (_**name**_) from template to formData, follow the same steps to add the other inputs' values (**_email_**, **_body_**).
  - grab your **_<u>access key</u>_** from email you received earlier and add it into the environment variables, in our case we called it (**_<u>form_access_key</u>_**) see example below:
  - `formData.append('access_key', environment.form_access_key);` 
  - `formData.append('subject', 'Email Support From Your Site');` to set subject text.
@@ -111,9 +98,7 @@ contactFormValues = {
 
 ---
 
-> _**<u>Here we go!</u>**_
- now we set everything up you can go and give it a try.
-that's it for integrating Web3Forms API in Angular.
+> _**<u>Congratulations! You are all set up and ready to go.</u>**_
 
 ---
 
