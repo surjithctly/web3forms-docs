@@ -1,9 +1,6 @@
-# Integrate Web3Forms API in Angular
+# Use Web3Forms with Angular.js
 
-## Why Web3Forms?
-We use Web3Forms for the needlessness of a back-end server, so no need to set-up a back-end API to send our emails.
-
-## prerequisites
+## Prerequisites
 
 Angular basics:
 - **_Services_**
@@ -265,10 +262,4 @@ async submitEmail(contactForm: NgForm) {
 
 ---
 
->[Web3Forms home page](https://web3forms.com)
-
->[Web3Forms docs](https://docs.web3forms.com/)
-
----
-### THIS TUTORIAL WRITTEN BY: [CoderNadir](https://dev.to/codernadir)
----
+*This article is written by [CoderNadir](https://dev.to/codernadir)*
