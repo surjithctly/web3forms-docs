@@ -65,14 +65,7 @@ Note: You do not need to use `multipart/form-data` if you are using our advanced
 
 You may also pass many options to the file upload using data-\* attributes. Here are some of the following:
 
-| Data Attribute          | Default Value   | Description                                                      |
-| ----------------------- | --------------- | ---------------------------------------------------------------- |
-| `data-multiple`         | `false`         | Set to `true` if you want to allow multiple files.               |
-| `data-maxsize`          | `NA`            | Maximum File Size in MB. eg: `"10"` for 10 MB `"0.5"` for 500 KB |
-| `data-images-only`      | `false`         | Set to `true` to allow only image files.                         |
-| `data-button-text`      | `Upload a File` | File Upload Button Text                                          |
-| `data-background-color` | `#2a2a2a`       | File Upload button background color. Values in Hex               |
-| `data-text-color`       | `#FFFFFF`       | File Upload button text color. Values in Hex                     |
+<table><thead><tr><th width="264">Data Attribute</th><th width="169">Default Value</th><th>Description</th></tr></thead><tbody><tr><td><code>data-multiple</code></td><td><code>false</code></td><td>Set to <code>true</code> if you want to allow multiple files. </td></tr><tr><td><code>data-maxsize</code></td><td><code>NA</code></td><td>Maximum File Size in MB. eg: <code>"10"</code> for 10 MB <code>"0.5"</code> for 500 KB</td></tr><tr><td><code>data-images-only</code></td><td><code>false</code></td><td>Set to <code>true</code> to allow only image files. </td></tr><tr><td><code>data-button-text</code></td><td><code>Upload a File</code></td><td>File Upload Button Text</td></tr><tr><td><code>data-background-color</code></td><td><code>#2a2a2a</code></td><td>File Upload button background color. Values in Hex</td></tr><tr><td><code>data-text-color</code></td><td><code>#FFFFFF</code></td><td>File Upload button text color. Values in Hex</td></tr></tbody></table>
 
 Our File Upload API is powered by [UploadCare](https://uploadcare.com/). So you can also add any `data-*` attributes supported by them. [See more available options here](https://uploadcare.com/docs/uploads/file-uploader-options/)
 
