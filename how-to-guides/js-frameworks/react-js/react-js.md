@@ -32,7 +32,9 @@ export default function ContactForm() {
     defaultValue: "Someone" 
   });
   
-  setValue("subject", `${userName} sent a message from Website`);
+  useEffect(() => {
+    setValue('subject', `${userName} sent a message from Website`)
+  }, [userName, setValue]);
 
   const onSubmit = async (data, e) => {
     console.log(data);
