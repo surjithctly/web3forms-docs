@@ -12,7 +12,7 @@ To setup, first you should register your domain on Google reCaptcha  and generat
 
 ![Registering reCaptcha](<../../.gitbook/assets/image (4) (2) (2) (2) (2).png>)
 
-Now go to [https://web3forms.com/pro](https://web3forms.com/pro) page and add your reCaptcha Secret Key and save the form.&#x20;
+Now login to Web3Forms Dashboard (Beta Access) and add your reCaptcha Secret Key in the form settings.
 
 Now open your HTML file where your form exists and paste the following code just before the closing of `</body>` tag.&#x20;
 
