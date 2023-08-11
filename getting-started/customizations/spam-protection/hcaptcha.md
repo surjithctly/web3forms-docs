@@ -75,3 +75,59 @@ form.addEventListener('submit', function(e) {
 });
 </script>
 ```
+
+## Usage with React / Next.js
+
+To use hCaptcha with React or Next.js, please follow the instructions below.&#x20;
+
+First, install the [@hcaptcha/react-hcaptcha ](https://www.npmjs.com/package/@hcaptcha/react-hcaptcha)package from NPM.&#x20;
+
+```bash
+npm install @hcaptcha/react-hcaptcha --save
+# or
+pnpm add @hcaptcha/react-hcaptcha
+```
+
+Then, add the \<HCaptcha/> component inside the form.&#x20;
+
+Make sure you are using `50b2fe65-b00b-4b9e-ad62-3ba471098be2`as the `sitekey` for free plans. You can use a custom site key if you are on a Paid plan.&#x20;
+
+<pre class="language-jsx"><code class="lang-jsx">import { useForm } from "react-hook-form";
+<strong>import HCaptcha from '@hcaptcha/react-hcaptcha';
+</strong>
+export default function ContactForm() {
+  const { register, handleSubmit, setValue } = useForm();
+  
+<strong>  const onHCaptchaChange = (token) => {
+</strong><strong>    setValue("h-captcha-response", token);
+</strong><strong>  };
+</strong>  
+  const onSubmit = async (data) => {
+    console.log(data);
+    
+    await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: data
+    }).then((res) => res.json());
+  }
+
+return (
+  &#x3C;form onSubmit={handleSubmit(onSubmit)}>
+     {/* // other form fields */}
+<strong>      &#x3C;HCaptcha
+</strong><strong>         sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+</strong><strong>         onVerify={onHCaptchaChange} 
+</strong>      /> 
+  &#x3C;/form>
+)}
+</code></pre>
+
+That's it.&#x20;
+
+Make sure you have enabled `hcaptcha` as the Block Spam option in the settings. Login to your dashboard to change it if not enabled already.
+
+#### Other implementations
+
+You can see the following guide for more examples. Just make sure you are using the correct `sitekey` as mentioned above.\
+\
+[https://www.npmjs.com/package/@hcaptcha/react-hcaptcha](https://www.npmjs.com/package/@hcaptcha/react-hcaptcha)&#x20;
