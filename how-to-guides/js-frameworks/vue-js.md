@@ -1,3 +1,6 @@
+# Vue JS
+
+```html
 <script setup lang="ts">
 import { ref } from "vue";
 const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
@@ -33,3 +36,4 @@ const submitForm = async () => {
     <button type="submit">Send Message</button>
   </form>
 </template>
+```
