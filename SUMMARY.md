@@ -23,6 +23,7 @@
   * [Advanced File Uploader](getting-started/pro-features/advanced-file-uploader.md)
   * [Webhooks](getting-started/pro-features/webhooks.md)
   * [Restrict to Domain](getting-started/pro-features/restrict-to-domain.md)
+  * [Intro Text](getting-started/pro-features/intro-text.md)
 * [Examples](getting-started/integrations/examples/README.md)
   * [Basic HTML Contact Form](getting-started/examples/basic-html-contact-form.md)
   * [Ajax Contact Form using Javascript](getting-started/examples/ajax-contact-form-using-javascript.md)
