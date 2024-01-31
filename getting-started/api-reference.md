@@ -2,7 +2,7 @@
 
 {% swagger baseUrl="https://api.web3forms.com" path="/submit" method="post" summary="Form Submission" %}
 {% swagger-description %}
-This endpoint allows you to submit form submissions. The following are the reserved names that will trigger form functions. You may use any other names in your forms as you need and it will be forwarded to your email as-is. 
+This endpoint allows you to submit form submissions. The following are the reserved names that will trigger form functions. You may use any other names in your forms as you need and it will be forwarded to your email as-is.&#x20;
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="access_key" type="string" required="true" %}
@@ -14,54 +14,32 @@ User Email. This will be used to set reply to address. So its easy to follow-up.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="subject" type="string" %}
-Email Subject. It can be submitted by user or prefilled using 
-
-`hidden`
-
- attribute.
+Email Subject. It can be submitted by user or prefilled using `hidden` attribute.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="ccemail" type="string" %}
-**PRO feature:**
-
- Add your co-workers to your email notification.
+**PRO feature:** Add your co-workers to your email notification.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="replyto" type="string" %}
-Reply to Email. If you don't want to use 
-
-`email`
-
- as replyto, you can assign a custom email here.
+Reply to Email. If you don't want to use `email` as replyto, you can assign a custom email here.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="redirect" type="string" %}
-URL. You can use a custom URL to redirect to a page when the form submits successfully.
-
-\
-
-
-
-
+URL. You can use a custom URL to redirect to a page when the form submits successfully.\
 `NOTE: Only recommended when using without JavaScript`
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="botcheck" type="boolean" %}
-Hidden. To prevent Spam Submissions. Make sure its hidden by adding 
-
-`display:none;`
+Hidden. To prevent Spam Submissions. Make sure its hidden by adding `display:none;`
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="attachment" type="file" %}
-**PRO feature:**
-
- Send a file.
+**PRO feature:** Send a file.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="webhook" type="string" %}
-**PRO feature:**
-
- Hidden. Trigger a webhook when form is submitted.
+**PRO feature:** Hidden. Trigger a webhook when form is submitted.
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="Form Submitted Successfully" %}
