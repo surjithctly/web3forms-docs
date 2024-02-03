@@ -62,6 +62,7 @@
   * [Alpine.js](how-to-guides/js-frameworks/alpine.js.md)
 * [Site Builders](how-to-guides/site-builders/README.md)
   * [Webflow](how-to-guides/site-builders/webflow.md)
+  * [Framer](how-to-guides/site-builders/framer.md)
   * [Carrd.co](how-to-guides/site-builders/carrd.co.md)
   * [Squarespace](how-to-guides/site-builders/squarespace.md)
   * [Wix](how-to-guides/site-builders/wix.md)
