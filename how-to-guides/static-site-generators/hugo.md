@@ -1,148 +1,16 @@
----
-description: Custom Contact form for Astro
----
+# Hugo
 
-# Astro
-
-Here's a working contact form example for Astro with Web3Forms
+Here's a working contact form example for Hugo with Web3Forms
 
 ```markup
----
-import Button from "./ui/button.astro";
----
+<form action="https://api.web3forms.com/submit" method="POST">
 
-<!-- // Styling Requires Tailwind CSS -->
-<form
-  action="https://api.web3forms.com/submit"
-  method="POST"
-  id="form"
-  class="needs-validation"
-  data-astro-reload
-  novalidate>
-  
-   <!-- Add your Web3Forms Access Key -->
-  <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
-  
-  <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
-  <div class="mb-5">
-    <input
-      type="text"
-      placeholder="Full Name"
-      required
-      class="w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100"
-      name="name"
-    />
-    <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
-      Please provide your full name.
-    </div>
-  </div>
-  <div class="mb-5">
-    <label for="email_address" class="sr-only">Email Address</label><input
-      id="email_address"
-      type="email"
-      placeholder="Email Address"
-      name="email"
-      required
-      class="w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100"
-    />
-    <div class="empty-feedback text-red-400 text-sm mt-1">
-      Please provide your email address.
-    </div>
-    <div class="invalid-feedback text-red-400 text-sm mt-1">
-      Please provide a valid email address.
-    </div>
-  </div>
-  <div class="mb-3">
-    <textarea
-      name="message"
-      required
-      placeholder="Your Message"
-      class="w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none h-36 focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100"
-    ></textarea>
-    <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
-      Please enter your message.
-    </div>
-  </div>
-  <Button type="submit" size="lg" block>Send Message</Button>
-  <div id="result" class="mt-3 text-center"></div>
+    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+    <input type="text" name="name" required>
+    <input type="email" name="email" required>
+    <textarea name="message" required></textarea>
+    <button type="submit">Submit Form</button>
+
 </form>
-
-<style>
-  .invalid-feedback,
-  .empty-feedback {
-    display: none;
-  }
-
-  .was-validated :placeholder-shown:invalid ~ .empty-feedback {
-    display: block;
-  }
-
-  .was-validated :not(:placeholder-shown):invalid ~ .invalid-feedback {
-    display: block;
-  }
-
-  .is-invalid,
-  .was-validated :invalid {
-    border-color: #dc3545;
-  }
-</style>
-
-<script is:inline>
-  // astro:page-load to support view Transitions.
-  // use DOMContentLoaded event if you are not using View Transitions
-
-  document.addEventListener(
-    "astro:page-load",
-    () => {
-      const form = document.getElementById("form");
-      const result = document.getElementById("result");
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        form.classList.add("was-validated");
-        if (!form.checkValidity()) {
-          form.querySelectorAll(":invalid")[0].focus();
-          return;
-        }
-        const formData = new FormData(form);
-        const object = Object.fromEntries(formData);
-        const json = JSON.stringify(object);
-
-        result.innerHTML = "Sending...";
-
-        fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: json,
-        })
-          .then(async (response) => {
-            let json = await response.json();
-            if (response.status == 200) {
-              result.classList.add("text-green-500");
-              result.innerHTML = json.message;
-            } else {
-              console.log(response);
-              result.classList.add("text-red-500");
-              result.innerHTML = json.message;
-            }
-          })
-          .catch((error) => {
-            console.log(error);
-            result.innerHTML = "Something went wrong!";
-          })
-          .then(function () {
-            form.reset();
-            form.classList.remove("was-validated");
-            setTimeout(() => {
-              result.style.display = "none";
-            }, 5000);
-          });
-      });
-    },
-    { once: true },
-  );
-</script>
 ```
