@@ -25,6 +25,19 @@ value="https://web3forms.com/success?title=My%20Text&desc=Custom%20Description" 
 
 <figure><img src="../../.gitbook/assets/CleanShot 2024-02-02 at 13.24.19@2x.png" alt="" width="375"><figcaption><p>After customization - French Text</p></figcaption></figure>
 
+### Fix Stale Form Data after clicking "Go Back"
+
+You might have noticed, after successful form submission, the user will show success page as shown above. However, once user clicked the "Go Back" button, the contact form fileds will still show the form data. it will not clear. In that case, make sure you add the following code to fix that.&#x20;
+
+```html
+<script>
+    window.onload = function() {
+        // Reset the form fields when the page loads
+        document.getElementById("form").reset();
+    };
+</script>
+```
+
 ### Redirect to your your own Website / URL
 
 To redirect the success page to your own website or another different URL, please use the custom redirection. See this guide [redirection.md](redirection.md "mention")for more details.&#x20;
