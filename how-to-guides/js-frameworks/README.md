@@ -1,4 +1,2 @@
 # JS Frameworks
 
-test
-

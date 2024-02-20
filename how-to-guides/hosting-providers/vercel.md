@@ -26,19 +26,19 @@ Now, click [New Project](https://vercel.com/new) button from your dashboard.
 
 Now, you can see your repos, click on **Import** button near the repo you want to import.
 
-### Step 08: Deploy Vercel App
+### Step 05: Deploy Vercel App
 
 ![](../../.gitbook/assets/deploy-vercel.png)
 
 Configure you name and settings. Click on **Deploy** button. You're good to go!
 
-## Step 09: Congratulations! You're App is deployed
+### Step 06: Congratulations! You're App is deployed
 
 ![](../../.gitbook/assets/congrats.png)
 
 Congrats, You're app is now deployed on vercel. You can now visit it! It will work absolutely fine. Well done! 👏
 
-## Test App
+### Test App
 
 ![](../../.gitbook/assets/app-live.png)
 
