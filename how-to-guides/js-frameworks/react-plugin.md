@@ -66,7 +66,8 @@ export default function Contact() {
 
       <div>{result}</div>
   </div>
-)
+ )
+}
 ```
 
 ### Advanced Example (with tailwindcss)
