@@ -9,7 +9,7 @@
   * [Email Subject line](getting-started/customizations/email-subject.md)
   * [Success / Thank You Page](getting-started/customizations/success-thank-you-page.md)
   * [Custom Redirection](getting-started/customizations/redirection.md)
-  * [SPAM Protection](getting-started/customizations/spam-protection/README.md)
+  * [Captcha & SPAM](getting-started/customizations/spam-protection/README.md)
     * [hCaptcha](getting-started/customizations/spam-protection/hcaptcha.md)
     * [Honeypot](getting-started/customizations/spam-protection/spam-protection.md)
     * [Report Spam](getting-started/customizations/spam-protection/report-spam.md)
