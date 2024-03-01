@@ -1,229 +1,72 @@
+---
+description: Create a working contact form in nuxt 3 using web3forms.
+---
+
 # Nuxt.js
 
-Here's a simple Contact form Working Example for Nuxt.js with Web3Forms
+Here's a simple Contact form Example Code for Nuxt 3 with Web3Forms
 
 ```markup
 <template>
-    <form @submit.prevent="submitForm">
-      <input type="text" name="name" v-model="name"/>
-      <input type="email" name="email"  v-model="email"/>
-      <textarea name="message" v-model="message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </template>
-
-  <script>
-  const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
-
-  export default {
-    data() {
-      return {
-        name: "",
-        email: "",
-        message: "",
-      };
-    },
-    methods: {
-      async submitForm() {
-        const response = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify({
-            access_key: WEB3FORMS_ACCESS_KEY,
-            name: this.name,
-            email: this.email,
-            message: this.message,
-          }),
-        });
-        const result = await response.json();
-        if (result.success) {
-          console.log(result);
-        }
-      },
-    },
-  };
-  </script>
-```
-
-## Advanecd Example
-
-The following example uses [@nuxtjs/axios](https://axios.nuxtjs.org/setup) and [@nuxtjs/tailwindcss](https://tailwindcss.nuxtjs.org/setup) (optional) to make it work.
-
-```markup
-<template> 
-  <div class="flex items-center min-h-screen bg-gray-50 dark:bg-gray-900">
-    <div class="container mx-auto">
-      <div class="max-w-md mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
-        <div class="text-center">
-          <h1
-            class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200"
-          >
-            Contact Us
-          </h1>
-          <p class="text-gray-400 dark:text-gray-400">
-            Fill up the form below to send us a message.
-          </p>
-        </div>
-        <div class="m-7">
-          <form @submit.prevent="submitForm">
-            <input
-              type="checkbox"
-              name="botcheck"
-              id=""
-              style="display: none"
-            />
-            <div class="mb-6">
-              <label
-                for="name"
-                class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
-                >Full Name</label
-              >
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="John Doe"
-                required
-                v-model="form.name"
-                class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
-              />
-            </div>
-            <div class="mb-6">
-              <label
-                for="email"
-                class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
-                >Email Address</label
-              >
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="you@company.com"
-                required
-                v-model="form.email"
-                class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
-              />
-            </div>
-            <div class="mb-6">
-              <label
-                for="phone"
-                class="text-sm text-gray-600 dark:text-gray-400"
-                >Phone Number</label
-              >
-              <input
-                type="text"
-                name="phone"
-                id="phone"
-                placeholder="+1 (555) 1234-567"
-                required
-                v-model="form.phone"
-                class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
-              />
-            </div>
-            <div class="mb-6">
-              <label
-                for="message"
-                class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
-                >Your Message</label
-              >
-
-              <textarea
-                rows="5"
-                name="message"
-                id="message"
-                placeholder="Your Message"
-                v-model="form.message"
-                class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
-                required
-              ></textarea>
-            </div>
-            <div class="mb-6">
-              <button
-                type="submit"
-                class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none"
-              >
-                Send Message
-              </button>
-            </div>
-            <p
-              :class="`text-base text-center 
-
-              ${status === 'success' ? 'text-green-500' : ''}
-               ${status === 'error' ? 'text-red-500' : ''}
-               ${status === '' ? 'text-gray-4500' : ''}
-               `"
-            >
-              {{ result }}
-            </p>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
+  <form @submit.prevent="submitForm">
+    <input type="text" name="name" v-model="name"/>
+    <input type="email" name="email"  v-model="email"/>
+    <textarea name="message" v-model="message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
 </template>
 
-<script>
-import axios from "axios";
 
-export default {
-  data() {
-    return {
-      form: {
-        access_key: "YOUR_ACCESS_KEY_HERE",
-        subject: "New Submission from Web3Forms",
+<script setup>
+import { ref } from 'vue';
 
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
-      },
-      result: "",
-      status: "",
-    };
-  },
-  methods: {
-    async submitForm(e) {
-      this.result = "Please wait...";
-      axios.create({
-        headers: { "Content-Type": "application/json" },
-      });
-      await axios
-        .post("https://api.web3forms.com/submit", this.form)
-        .then(async (response) => {
-          //let json = await response.json();
-          //this.result = json.message;
-          console.log(response);
-          this.result = response.data.message;
+const form = ref({
+  access_key: "YOUR_ACCESS_KEY_HERE",
+  subject: "New Submission from Web3Forms",
+  name: "",
+  email: "",
+  message: "",
 
-          if (response.status === 200) {
-            this.status = "success";
-          } else {
-            console.log(response);
-            this.status = "error";
-          }
-        })
-        .catch((error) => {
-          console.log(error);
-          this.status = "error";
-          this.result = "Something went wrong!";
-        })
-        .then(() => {
-          const form = this.form;
-          form.name = "";
-          form.email = "";
-          form.phone = "";
-          form.message = "";
+});
 
-          setTimeout(() => {
-            this.result = "";
-            this.status = "";
-          }, 5000);
-        });
-    },
-  },
+const result = ref("");
+const status = ref("");
+
+const submitForm = async () => {
+  result.value = "Please wait...";
+  try {
+    const response = await $fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: form.value,
+    });
+
+    console.log(response); // You can remove this line if you don't need it
+    
+    result.value = response.message;
+
+    if (response.status === 200) {
+      status.value = "success";
+    } else {
+      console.log(response); // Log for debugging, can be removed
+      status.value = "error";
+    }
+  } catch (error) {
+    console.log(error); // Log for debugging, can be removed
+    status.value = "error";
+    result.value = "Something went wrong!";
+  } finally {
+    // Reset form after submission
+    form.value.name = "";
+    form.value.email = "";
+    form.value.message = "";
+
+    // Clear result and status after 5 seconds
+    setTimeout(() => {
+      result.value = "";
+      status.value = "";
+    }, 5000);
+  }
 };
 </script>
 ```
