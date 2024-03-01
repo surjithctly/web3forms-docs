@@ -27,6 +27,7 @@
   * [Intro Text](getting-started/pro-features/intro-text.md)
 * [Examples](getting-started/integrations/examples/README.md)
   * [Basic HTML Contact Form](getting-started/examples/basic-html-contact-form.md)
+  * [Advanced - All Options](getting-started/examples/advanced-all-options.md)
   * [Ajax Contact Form using Javascript](getting-started/examples/ajax-contact-form-using-javascript.md)
   * [Multi Column Contact Form](getting-started/examples/multi-column-contact-form.md)
   * [Javascript Form Validation](getting-started/examples/javascript-form-validation.md)
