@@ -32,6 +32,32 @@ We recommend adding **hCaptcha** if you don't mind showing the above captcha box
 <script src="https://web3forms.com/client/script.js" async defer></script>
 ```
 
+### Configuration Options
+
+You can provide all options provided by hCaptcha by default. You need to append the option with `data-*`  attribute. See example below
+
+```markup
+ <div class="h-captcha" 
+      data-captcha="true" 
+      data-lang="de" 
+      data-theme="dark"
+      data-onload="myFunction"
+      data-render="explicit"
+      data-size="compact"
+      ></div>
+```
+
+For more configuration options, visit: [https://docs.hcaptcha.com/configuration](https://docs.hcaptcha.com/configuration)
+
+### Manual Setup
+
+If you want to load hCoptcha directly instead of using web3forms proxy, make sure you use the following **sitekey** for free plans. You can set your own site key and secret key on all paid plans,&#x20;
+
+```javascript
+// hCaptcha Site Key for Web3Forms
+data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+```
+
 ### Full Code
 
 ```html
