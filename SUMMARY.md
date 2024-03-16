@@ -19,7 +19,7 @@
   * [reCaptcha Integration](getting-started/pro-features/recaptcha-integration.md)
   * [Cloudflare Turnstile Captcha](getting-started/pro-features/cloudflare-turnstile-captcha.md)
   * [Add CC Email](getting-started/pro-features/add-cc-email.md)
-  * [Autoresponder](getting-started/pro-features/autoresponder.md)
+  * [Autoresponder (Auto-Reply)](getting-started/pro-features/autoresponder.md)
   * [File Attachments](getting-started/pro-features/file-attachments.md)
   * [Advanced File Uploader](getting-started/pro-features/advanced-file-uploader.md)
   * [Webhooks](getting-started/pro-features/webhooks.md)
