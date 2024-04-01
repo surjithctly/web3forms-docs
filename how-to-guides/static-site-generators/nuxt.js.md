@@ -9,9 +9,9 @@ Here's a simple Contact form Example Code for Nuxt 3 with Web3Forms
 ```markup
 <template>
   <form @submit.prevent="submitForm">
-    <input type="text" name="name" v-model="name"/>
-    <input type="email" name="email"  v-model="email"/>
-    <textarea name="message" v-model="message"></textarea>
+    <input type="text" name="name" v-model="form.name"/>
+    <input type="email" name="email"  v-model="form.email"/>
+    <textarea name="message" v-model="form.message"></textarea>
     <button type="submit">Send Message</button>
   </form>
 </template>
