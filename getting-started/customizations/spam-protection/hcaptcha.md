@@ -142,6 +142,7 @@ return (
      {/* // other form fields */}
 <strong>      &#x3C;HCaptcha
 </strong><strong>         sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+</strong><strong>         reCaptchaCompat={false}
 </strong><strong>         onVerify={onHCaptchaChange} 
 </strong>      /> 
   &#x3C;/form>
