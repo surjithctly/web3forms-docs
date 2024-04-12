@@ -116,7 +116,9 @@ pnpm add @hcaptcha/react-hcaptcha
 
 Then, add the \<HCaptcha/> component inside the form.&#x20;
 
-Make sure you are using `50b2fe65-b00b-4b9e-ad62-3ba471098be2`as the `sitekey` for free plans. You can use a custom site key if you are on a Paid plan.&#x20;
+Make sure you are using `50b2fe65-b00b-4b9e-ad62-3ba471098be2`as the `sitekey` for free plans. Also make sure `reCaptchaCompat` is false.&#x20;
+
+You can use a custom site key if you are on a Paid plan.&#x20;
 
 <pre class="language-jsx"><code class="lang-jsx">import { useForm } from "react-hook-form";
 <strong>import HCaptcha from '@hcaptcha/react-hcaptcha';
