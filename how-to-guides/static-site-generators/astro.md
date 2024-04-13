@@ -6,7 +6,7 @@ description: Custom Contact form for Astro
 
 Here's a working contact form example for Astro with Web3Forms
 
-```markup
+```html
 ---
 import Button from "./ui/button.astro";
 ---
@@ -88,12 +88,11 @@ import Button from "./ui/button.astro";
 </style>
 
 <script is:inline>
-  // astro:page-load to support view Transitions.
-  // use DOMContentLoaded event if you are not using View Transitions
 
-  document.addEventListener(
-    "astro:page-load",
-    () => {
+  // use astro:page-load event if you are using View Transitions
+
+  document.addEventListener("DOMContentLoaded", () => {
+  
       const form = document.getElementById("form");
       const result = document.getElementById("result");
 
