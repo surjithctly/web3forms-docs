@@ -125,9 +125,15 @@ In some rare cases, you/your customers might receive `{ message: forbidden }` er
 
 If you got this error and you think it's a mistake, please contact support for further assistance.&#x20;
 
-## Message Marked as Spam
+## Email landed in Spam/Junk Folder
 
-Our server protects from spam attacks for our users. But occasionally, it might happen while testing the form. This is usually because some test words we use might trigger our spam server. So to fix it, make sure you add input data as natural as possible.&#x20;
+if your contact form messages lands in your email provider's spam/junk folder especially if you are using hotmail or outlook, follow the steps.&#x20;
 
-If issue persists, please [contact support](https://web3forms.com/help?contact=true).&#x20;
+1. Add _`notify@web3forms.com`_ email to your contact list
+2. Manually mark few of the emails as Not Spam / Not Junk
+3. Move few emails to your Primary/Main Inbox Tab
+4. Contact Support and ask to Disable "**Email Grouping**" on your account\
+   (hotmail / outlook / Microsoft 360 users).
+
+Click here to [contact support](https://web3forms.com/help?contact=true).&#x20;
 
