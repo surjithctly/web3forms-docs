@@ -35,6 +35,7 @@
   * [Raw Contact Form](getting-started/examples/raw-contact-form.md)
   * [Google reCaptcha v3](getting-started/examples/recaptcha-v3.md)
   * [File Upload Form](getting-started/examples/file-upload-form.md)
+  * [With Multiple Checkbox](getting-started/examples/with-multiple-checkbox.md)
 * [Integrations](getting-started/integrations/README.md)
   * [Zapier](getting-started/integrations/zapier.md)
   * [Integromat](getting-started/integrations/integromat.md)
