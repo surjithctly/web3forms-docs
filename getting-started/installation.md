@@ -12,7 +12,7 @@ Create a form in your website with our form endpoint inside action attribute. Fo
 
 {% tabs %}
 {% tab title="Basic Example" %}
-```markup
+```html
 <form action="https://api.web3forms.com/submit" method="POST">
 
     <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
@@ -28,7 +28,7 @@ Create a form in your website with our form endpoint inside action attribute. Fo
 {% endtab %}
 
 {% tab title="Advanced Example" %}
-```markup
+```html
 <form action="https://api.web3forms.com/submit" method="POST">
 
     <!-- REQUIRED: Your Access key here. Don't worry this can be public -->
@@ -93,7 +93,7 @@ Make sure you added \`name\` attribute, form action URL and the \`access\_key\` 
 
 Add your access key to start receiving email submissions.
 
-```markup
+```html
 <input type="hidden" name="apikey" value="YOUR_ACCESS_KEY_HERE">
 ```
 

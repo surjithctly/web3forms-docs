@@ -16,7 +16,7 @@ By default, Web3Forms redirects to our website after form submission, However if
 
 #### Examples
 
-```markup
+```html
 <!-- Default URL -->
 <input type="hidden" name="redirect" value="https://web3forms.com/success">
 
@@ -29,7 +29,7 @@ By default, Web3Forms redirects to our website after form submission, However if
 
 Also, make sure you provide full URL as the value instead of relative URL
 
-```markup
+```html
 
 <!-- ❌ Wrong. This won't work -->
 <input type="hidden" name="redirect" value="/thanks.html">

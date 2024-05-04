@@ -12,19 +12,6 @@ Tip: To use your own thank you page, visit [redirection.md](redirection.md "ment
 
 <figure><img src="../../.gitbook/assets/CleanShot 2024-02-02 at 13.16.55@2x (1).png" alt="" width="375"><figcaption><p>Default Success Page</p></figcaption></figure>
 
-### Customize Title & Description
-
-To customize the title and description of the success page after the form submission, use the `title` and `desc` params to the redirect URL.&#x20;
-
-```html
-<input 
-type="hidden" 
-name="redirect" 
-value="https://web3forms.com/success?title=My%20Text&desc=Custom%20Description" />
-```
-
-<figure><img src="../../.gitbook/assets/CleanShot 2024-02-02 at 13.24.19@2x.png" alt="" width="375"><figcaption><p>After customization - French Text</p></figcaption></figure>
-
 ### Fix Stale Form Data after clicking "Go Back"
 
 You might have noticed, after successful form submission, the user will show success page as shown above. However, once user clicked the "Go Back" button, the contact form fileds will still show the form data. it will not clear. In that case, make sure you add the following code to fix that.&#x20;
