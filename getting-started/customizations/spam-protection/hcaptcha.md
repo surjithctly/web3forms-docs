@@ -49,6 +49,37 @@ You can provide all options provided by hCaptcha by default. You need to append 
 
 For more configuration options, visit: [https://docs.hcaptcha.com/configuration](https://docs.hcaptcha.com/configuration)
 
+### Activate hCaptcha to your form
+
+Once everything's setup you need to activate hcaptcha on your form to make it mandatory on each form submissions. For that, submit the form by checking the checkbox once and send the form. Now your hcaptcha will be activated.&#x20;
+
+{% hint style="info" %}
+Add Client Side Validation as shown below to prevent form submission without checking the hCaptcha field.&#x20;
+{% endhint %}
+
+### Client Side Validation
+
+Use this snippet if you are using the HTML form-embedded method without Javascript to check whether the hCaptcha is filled or not.&#x20;
+
+Add this code block just above the closing of \</body> and make sure `YOUR_FORM_ID` is updated with your form id.&#x20;
+
+```html
+<script>
+const form = document.getElementById('YOUR_FORM_ID');
+
+form.addEventListener('submit', function(e) {
+
+    const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+    if (!hCaptcha) {
+        e.preventDefault();
+        alert("Please fill out captcha field")
+        return
+    }
+});
+</script>
+```
+
 ### Manual Setup
 
 If you want to load hCoptcha directly instead of using web3forms proxy, make sure you use the following **sitekey** for free plans. You can set your own site key and secret key on all paid plans,&#x20;
@@ -78,29 +109,6 @@ data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
 ```
 
 If you add just two lines to your contact form, you will get a working hCaptcha to protect your form.&#x20;
-
-### Client Side Validation
-
-Use this snippet if you are using the HTML form-embedded method without Javascript to check whether the hCaptcha is filled or not.&#x20;
-
-Add this code block just above the closing of \</body> and make sure `YOUR_FORM_ID` is updated with your form id.&#x20;
-
-```html
-<script>
-const form = document.getElementById('YOUR_FORM_ID');
-
-form.addEventListener('submit', function(e) {
-
-    const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
-
-    if (!hCaptcha) {
-        e.preventDefault();
-        alert("Please fill out captcha field")
-        return
-    }
-});
-</script>
-```
 
 ## Usage with React / Next.js
 
