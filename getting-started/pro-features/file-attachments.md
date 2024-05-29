@@ -22,6 +22,22 @@ You will need to add `enctype="multipart/form-data"` to the Form Element to make
 If you are using Javascript / Ajax to submit the form, make sure you set the Headers accordingly. Setting wrong headers will throw an error.&#x20;
 {% endhint %}
 
+### Multiple File Attachments
+
+We support multiple file attachments on the contact form. We process them together and send them to you.
+
+```html
+<form action="https://api.web3forms.com/submit" enctype="multipart/form-data" method="POST">
+  ...
+  <label> Your Resume </label>
+  <input type="file" name="resume" />
+  
+  <label> Your Photo </label>
+  <input type="file" name="photo" />
+  ...  
+</form>
+```
+
 ### Advanced File Uploader
 
 Our Default HTML5 File uploader works only for single files up to 5 MB only. To upload multiple files or larger attachments, we recommend using our Advanced File Uploader. [Please see the guide here](file-attachments.md#undefined)
