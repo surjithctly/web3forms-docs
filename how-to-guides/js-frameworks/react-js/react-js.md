@@ -243,8 +243,7 @@ export default function ContactForm() {
         )}
       </div>
       <p
-        class="text-center text-sm
-      ">
+        className="text-center text-sm">
         <a
           href="https://web3forms.com/"
           target="_blank"
