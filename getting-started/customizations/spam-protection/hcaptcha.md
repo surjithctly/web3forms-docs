@@ -6,12 +6,14 @@ description: >-
 
 # hCaptcha
 
-![](<../../../.gitbook/assets/CleanShot 2022-08-19 at 18.47.23.png>)
+<figure><img src="../../../.gitbook/assets/CleanShot 2022-08-19 at 18.47.23.png" alt="" width="306"><figcaption><p>hCaptcha checkbox</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/CleanShot 2024-06-10 at 14.24.39@2x.png" alt="" width="375"><figcaption><p>hcaptcha solve problem</p></figcaption></figure>
 
 Web3Forms provides zero-config integration with hCaptcha. You don't need to setup your own keys or register with them. Just use the following code and add a script. You're done.&#x20;
 
 {% hint style="info" %}
-We recommend adding **hCaptcha** if you don't mind showing the above captcha box to the users. If not, you may use the hidden [honeypot](spam-protection.md) or [reCaptcha](../../pro-features/recaptcha-integration.md) method.&#x20;
+Remember **hCaptcha's** captcha mostly feels a bit difficult for users to solve. In that case, you can either use hCaptcha Paid Plan or use alternatives like hidden [honeypot](spam-protection.md) (less secure) or [reCaptcha](../../pro-features/recaptcha-integration.md) / [Cloudflare Turnstile Captcha](../../pro-features/cloudflare-turnstile-captcha.md) method (Pro).&#x20;
 {% endhint %}
 
 **Step 1: Add a \<div> inside your form**
