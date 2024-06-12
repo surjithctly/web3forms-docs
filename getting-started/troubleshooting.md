@@ -33,6 +33,21 @@ Ensure you have added a `name` attribute to each of your form elements. Form dat
 
 ```
 
+## Emails going to Spam/Junk Folder
+
+if your Web3Forms Submission emails lands in your email provider's spam/junk folder especially if you are using hotmail or outlook, follow the steps.&#x20;
+
+1. Add _`notify@web3forms.com`_ email to your contact list
+2. Add our domain `web3forms.com` to your safe sender's list
+
+<figure><img src="../.gitbook/assets/CleanShot 2024-06-12 at 13.05.00@2x.png" alt=""><figcaption><p>enabling safe sender in outlook</p></figcaption></figure>
+
+**In Gmail:**
+
+1. Manually mark a few of the emails as Not Spam / Not Junk
+2. Move a few emails to your Primary/Main Inbox Tab
+3. Add a filter to enable "Never Send to Spam" for emails coming from Web3Forms.&#x20;
+
 ## CORS Error
 
 Sometimes, you might receive a following error message while submitting form to web3forms.&#x20;
@@ -125,15 +140,7 @@ In some rare cases, you/your customers might receive `{ message: forbidden }` er
 
 If you got this error and you think it's a mistake, please contact support for further assistance.&#x20;
 
-## Email landed in Spam/Junk Folder
 
-if your contact form messages lands in your email provider's spam/junk folder especially if you are using hotmail or outlook, follow the steps.&#x20;
 
-1. Add _`notify@web3forms.com`_ email to your contact list
-2. Manually mark few of the emails as Not Spam / Not Junk
-3. Move few emails to your Primary/Main Inbox Tab
-4. Contact Support and ask to Disable "**Email Grouping**" on your account\
-   (hotmail / outlook / Microsoft 360 users).
 
-Click here to [contact support](https://web3forms.com/help?contact=true).&#x20;
 
