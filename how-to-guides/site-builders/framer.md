@@ -8,6 +8,8 @@ description: >-
 
 Here's a step by step instructions on how to setup Web3Forms with the new Framer Forms feature.&#x20;
 
+**Live Demo /Remix:** [**https://web3forms-remix.framer.website/**](https://web3forms-remix.framer.website/)
+
 ### Framer forms Pricing&#x20;
 
 Framer forms is providing only 50 submissions per month for free. Once you upgrade to Basic which is $15/m or Pro for $30/mo, you will get 500 & 2500 submissions per month respectively.&#x20;
