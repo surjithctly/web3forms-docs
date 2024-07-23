@@ -100,6 +100,8 @@ form.addEventListener('submit', function(e) {
 
 Iif you are using react, we suggest you to use the Filepond Library directly.&#x20;
 
+Also check: [Filepond React](https://github.com/pqina/react-filepond)
+
 **File Uploader Widget**
 
 ```jsx
