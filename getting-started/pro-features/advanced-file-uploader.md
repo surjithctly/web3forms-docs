@@ -7,7 +7,7 @@ description: >-
 # Advanced File Uploader
 
 {% hint style="info" %}
-Heads Up! This is a PRO feature. You must have an active membership to use this feature.
+Heads Up! This is a PRO feature. You must have an active subscription to use this feature.
 {% endhint %}
 
 Our Default HTML5 File Uploader only supports file attachments up to 5 MB. Also currently it does not support multiple files. If you need to upload large files or multiple files, use our advanced file uploader.
@@ -18,7 +18,7 @@ Our Default HTML5 File Uploader only supports file attachments up to 5 MB. Also 
 <form>
   ...
    <! -- Step 1: Add this line -->
-   <input type="file" data-advanced="true" />
+   <input type="file" data-advanced="true" name="attachment" />
   ...
 </form>
 ```
@@ -30,11 +30,26 @@ Our Default HTML5 File Uploader only supports file attachments up to 5 MB. Also 
 <script src="https://web3forms.com/client/script.js" async defer></script>
 ```
 
+### Advanced Options
+
+You can configure some options in the advanced uploader like multiple, accept types, max file size etc. See below:&#x20;
+
+```html
+ <input type="file" 
+ name="attachment"
+ data-advanced="true"                       (enable advanced file upload)
+ accept="image/*, application/pdf"          (accept only some file types)
+ data-max-files="3"                         (Total number of files allowed)
+ data-max-file-size="5MB"                   (Maximum file size for single item)
+ data-content="Drag & Drop or <i>Browse<i>" (Custom Label in your language)
+  />
+```
+
 ### Live Demo on Codepen
 
 Coming soon!
 
-### Full Code
+### Example Code
 
 ```html
 <form action="https://api.web3forms.com/submit" method="POST">
@@ -65,11 +80,23 @@ If you add just two lines to your contact form, you will get an advanced file up
 Note: You do not need to use `multipart/form-data` if you are using our advanced file uploader. You can use the normal method.&#x20;
 {% endhint %}
 
-### File Upload Options
+### Styling & Theme
 
-Our File Upload API is powered by  [Filepond](https://pqina.nl/filepond/). So you can check their docs for full customization options available.&#x20;
+You can set your own theme & style as you wish by overwriting the class names provided by filepond. Here's how a dark theme would look like:
 
-Filepond Documentation
+```html
+<!-- Dark Theme -->
+
+<style>
+  .filepond--panel-root {
+    background-color: #2c2c2c;
+  }
+  .filepond--drop-label {
+    color: #d4d4d4;
+  }
+</style>
+
+```
 
 
 
