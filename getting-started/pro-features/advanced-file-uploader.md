@@ -10,6 +10,8 @@ description: >-
 Heads Up! This is a PRO feature. You must have an active subscription to use this feature.
 {% endhint %}
 
+<figure><img src="../../.gitbook/assets/CleanShot 2024-11-04 at 18.21.54@2x.png" alt="" width="375"><figcaption></figcaption></figure>
+
 Our Default HTML5 File Uploader only supports file attachments up to 5 MB. Also currently it does not support multiple files. If you need to upload large files or multiple files, use our advanced file uploader.
 
 **Step 1: Add a File input inside your form with \`**data-advanced**\` attribute**
@@ -47,7 +49,7 @@ You can configure some options in the advanced uploader like multiple, accept ty
 
 ### Live Demo on Codepen
 
-Coming soon!
+[https://codepen.io/surjithctly/pen/RwXBQZR](https://codepen.io/surjithctly/pen/RwXBQZR)
 
 ### Example Code
 
