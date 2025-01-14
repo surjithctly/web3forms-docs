@@ -1,8 +1,14 @@
 ---
-description: Prevent bots and spammers using your forms to send emails.
+description: 'NOT RECOMMENDED: Prevent bots and spammers using your forms to send emails.'
 ---
 
 # Honeypot
+
+{% hint style="danger" %}
+**Warning:** This feature is depreciated. Please use any other captcha.&#x20;
+
+_Honeypot seems to be less effective in forms to prevent spam submissions. So, we suggest you add a proper captcha to protect your form._&#x20;
+{% endhint %}
 
 Bots and Spam Submissions are prevented using the Honeypot Spam Prevention method. By now, these bots are getting advanced, so we have made sure to add some extra layer of protection for this Honeypot. This will stop most bots from submitting your form.
 

@@ -11,6 +11,7 @@
   * [Custom Redirection](getting-started/customizations/redirection.md)
   * [Captcha & SPAM](getting-started/customizations/spam-protection/README.md)
     * [hCaptcha](getting-started/customizations/spam-protection/hcaptcha.md)
+    * [reCaptcha & Turnstile](getting-started/customizations/spam-protection/recaptcha-and-turnstile.md)
     * [Honeypot](getting-started/customizations/spam-protection/spam-protection.md)
     * [Report Spam](getting-started/customizations/spam-protection/report-spam.md)
   * [Custom Reply-To](getting-started/customizations/custom-reply-to.md)
