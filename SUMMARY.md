@@ -47,6 +47,7 @@
 * [Options Reference](getting-started/options-reference.md)
 * [API Reference](getting-started/api-reference.md)
 * [Troubleshooting](getting-started/troubleshooting.md)
+* [FAQ](getting-started/faq.md)
 
 ## How-to Guides
 
