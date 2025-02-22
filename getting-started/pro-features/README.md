@@ -3,7 +3,7 @@
 The [Pro plan](https://web3forms.com/pricing) offers even more possibilities:
 
 * Everything from Free Plan
-* Unlimited Submissions
+* High Submission Limits
 * File Attachments
 * reCaptcha Integration
 * Webhooks
