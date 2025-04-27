@@ -145,3 +145,5 @@ import Button from "./ui/button.astro";
   );
 </script>
 ```
+
+In above example [Astro UI Library](https://www.pingidentity.design/) was used which is not part of the Astro framework itself.
