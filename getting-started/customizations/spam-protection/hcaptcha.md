@@ -53,7 +53,7 @@ For more configuration options, visit: [https://docs.hcaptcha.com/configuration]
 
 ### Activate hCaptcha to your form
 
-Once everything's setup you need to activate hcaptcha on your form to make it mandatory on each form submissions. For that, submit the form by checking the checkbox once and send the form. Now your hcaptcha will be activated.&#x20;
+Once everything's setup you need to activate hCaptcha on your form to make it mandatory on each form submissions. For that, submit the form by checking the checkbox once and send the form. Now your hCaptcha will be activated.&#x20;
 
 {% hint style="info" %}
 Add Client Side Validation as shown below to prevent form submission without checking the hCaptcha field.&#x20;
@@ -84,7 +84,7 @@ form.addEventListener('submit', function(e) {
 
 ### Manual Setup
 
-If you want to load hCoptcha directly instead of using web3forms proxy, make sure you use the following **sitekey** for free plans. You can set your own site key and secret key on all paid plans,&#x20;
+If you want to load hCaptcha directly instead of using web3forms proxy, make sure you use the following **sitekey** for free plans. You can set your own site key and secret key on all paid plans,&#x20;
 
 ```javascript
 // hCaptcha Site Key for Web3Forms
