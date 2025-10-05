@@ -134,6 +134,12 @@ const response = await fetch('https://api.web3forms.com/submit', {
 
 ```
 
+## Form works locally, but not working on my hosted domain.&#x20;
+
+To prevent spam & abuse, we block certain domains, sub-domains & LTDs by default. If your form works as expected in localhost and not working in your custom domain website,  please [contact us](https://web3forms.com/contact) with the domain name to review. Once approved, you can submit form as usual.&#x20;
+
+To approve certain free sub-domains provided by some platforms won't be approved. So please add a custom domain and contact us if its not working. Otherwise, you would need a paid plan to allow the free sub-domain.&#x20;
+
 ## 403: Forbidden
 
 In some rare cases, you/your customers might receive `{ message: forbidden }` error with HTTP code `403`  from our server. This is usually because the IP address might have triggered our firewall. This usually happens when the IP has been previously blacklisted for Spam activity. Sometimes, It happens on broadband connections with pooled IP as well.
