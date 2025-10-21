@@ -25,7 +25,7 @@ Our Default HTML5 File Uploader only supports file attachments up to 5 MB. Also 
 </code></pre>
 
 {% hint style="info" %}
-If you are using advanced uploader, `enctype=""` is not required and must be removed from the `<form>`
+For advanced uploader, `enctype=""` is not required and must be removed from the `<form>`
 {% endhint %}
 
 **Step 2: Add the following script before the closing of \</body>**
