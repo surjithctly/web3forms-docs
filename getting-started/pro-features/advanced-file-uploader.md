@@ -16,7 +16,7 @@ Our Default HTML5 File Uploader only supports file attachments up to 5 MB. Also 
 
 **Step 1: Add a File input inside your form with \`**&#x64;ata-advance&#x64;**\` attribute**
 
-<pre class="language-html"><code class="lang-html">&#x3C;form action="https://api.web3forms.com/submit" enctype="multipart/form-data" method="POST">
+<pre class="language-html"><code class="lang-html">&#x3C;form action="https://api.web3forms.com/submit" method="POST">
   ...
    &#x3C;! -- Step 1: Add this line -->
 <strong>   &#x3C;input type="file" data-advanced="true" name="attachment" style="display:none;" />
@@ -24,10 +24,14 @@ Our Default HTML5 File Uploader only supports file attachments up to 5 MB. Also 
 &#x3C;/form>
 </code></pre>
 
+{% hint style="info" %}
+If you are using advanced uploader, `enctype=""` is not required and must be removed from the \<form>
+{% endhint %}
+
 **Step 2: Add the following script before the closing of \</body>**
 
 ```html
-<! -- Step 2: Add the Web3Forms script -->
+<! -- Step 2: Add our script to load the file uploader -->
 <script src="https://web3forms.com/client/script.js" async defer></script>
 ```
 
