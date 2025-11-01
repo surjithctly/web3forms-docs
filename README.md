@@ -1,10 +1,38 @@
-# Introduction
 
-Welcome to the documentation for [Web3Forms](https://web3forms.com/)
+<form action="https://api.web3forms.com/submit" method="POST">
+  <!-- Your Web3Forms access key -->
+  <input type="hidden" name="access_key" value="afb19210-d804-4437-a687-82245d69fa41">
 
-Web3Forms is a simple tool to set up Contact Forms for Static Websites. Receive form submissions directly in your email inbox without any server or back-end code. Its free! Web3Forms is perfect for static / JAM Stack websites. Start receiving submissions by creating an [Access Key](https://web3forms.com/#start)
+  <!-- Optional branding -->
+  <input type="hidden" name="from_name" value="Elijohnology Technician Website">
 
-Start this documentation by clicking the links below or choose your topic from the left side.
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
 
-{% page-ref page="getting-started/customizations/" %}
+  <button type="submit">Send Message</button>
+</form>
 
+<!-- Message display area -->
+<p id="result"></p>
+
+<script>
+  const form = document.querySelector("form");
+  const result = document.getElementById("result");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData
+    });
+
+    if (response.ok) {
+      result.innerHTML = "✅ Message sent successfully!";
+      form.reset();
+    } else {
+      result.innerHTML = "❌ Failed to send message. Please try again.";
+    }
+  });
+</script>
