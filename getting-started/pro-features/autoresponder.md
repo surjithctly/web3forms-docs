@@ -1,10 +1,10 @@
 # Autoresponder (Auto-Reply)
 
 {% hint style="info" %}
-Heads Up! This is a PRO feature. You must have an active membership to use this feature.
+Heads Up! This is a PRO feature. You must have an active subscription to use this feature.
 {% endhint %}
 
-Autoresponder is available for all Pro users. Contact support with the following details.&#x20;
+Autoresponder is available for all Pro/Agency users. Following details can be customised.&#x20;
 
 1. From Name (Company Name)
 2. Autoresponder Subject
@@ -13,7 +13,9 @@ Autoresponder is available for all Pro users. Contact support with the following
 5. Full `https://` path of your Logo Image (PNG preferred)\
    eg: `https://yoursite.com/img/logo.png`
 
-Also, to make the autoresponder work, you must make sure an **email field** with name attribute `email` or `Email` is included in the form. The autoresponder will send emails to that particular email once user filled the form.&#x20;
+<figure><img src="../../.gitbook/assets/CleanShot 2025-11-03 at 13.25.23@2x.png" alt=""><figcaption></figcaption></figure>
+
+Also, to make the autoresponder work, you must make sure your `<form>` has an **email field** with name attribute `email` or `Email` is included in the form. The autoresponder will send emails to that particular email once user filled the form.&#x20;
 
 ```html
 // example code     ⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄⌄

@@ -49,6 +49,7 @@ To render the Turnstile widget in your form:
 
 That's it. Your form will automatically be protected with Cloudflare Captcha.&#x20;
 
-\---
+<figure><img src="../../.gitbook/assets/CleanShot 2025-11-03 at 13.35.31@2x.png" alt=""><figcaption></figcaption></figure>
 
-To read more detailed guide, visit the official docs here: [https://developers.cloudflare.com/turnstile/get-started/](https://developers.cloudflare.com/turnstile/get-started/)
+To read more detailed guide, visit the official docs here: \
+[https://developers.cloudflare.com/turnstile/get-started/](https://developers.cloudflare.com/turnstile/get-started/)

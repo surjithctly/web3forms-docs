@@ -16,11 +16,9 @@ Webhook URL can be created on apps like [Zapier](https://zapier.com/) or [Make](
 
 ### Adding Webhooks to your form
 
-Just add the following line inside your `<form>` and make sure the change the `value=""` with your actual webhook URL from your app.&#x20;
+You can add your webhook link to your form in the /integrations Tab inside Form Settings.&#x20;
 
-```markup
-<input type="hidden" name="webhook" value="WEBHOOK_URL_HERE" />
-```
+<figure><img src="../../.gitbook/assets/CleanShot 2025-11-03 at 13.28.45@2x.png" alt=""><figcaption></figcaption></figure>
 
 ### Webhook Payload Structure
 

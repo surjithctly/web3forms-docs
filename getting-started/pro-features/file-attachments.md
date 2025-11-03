@@ -1,7 +1,7 @@
 # File Attachments
 
 {% hint style="info" %}
-Heads Up! This is a PRO feature. You must have an active membership to use this feature.
+Heads Up! This is a PRO feature. You must have an active subscription to use this feature.
 {% endhint %}
 
 ```markup
