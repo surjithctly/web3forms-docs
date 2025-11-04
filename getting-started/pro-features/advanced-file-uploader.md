@@ -24,8 +24,9 @@ Our Default HTML5 File Uploader only supports file attachments up to 5 MB. Also 
 &#x3C;/form>
 </code></pre>
 
-{% hint style="info" %}
-For advanced uploader, `enctype=""` is not required and must be removed from the `<form>`
+{% hint style="danger" %}
+For advanced uploader, `enctype=""` is not required and must be removed from the `<form>`\
+
 {% endhint %}
 
 **Step 2: Add the following script before the closing of \</body>**
@@ -81,7 +82,7 @@ You can configure some options in the advanced uploader like multiple, accept ty
 
 If you add just two lines to your contact form, you will get an advanced file upload form.&#x20;
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Note: You do not need to use `multipart/form-data` if you are using our advanced file uploader. You can use the normal method.&#x20;
 {% endhint %}
 
@@ -127,6 +128,54 @@ form.addEventListener('submit', function(e) {
 });
 </script>
 ```
+
+## Javascript Example
+
+{% hint style="warning" %}
+For Javascript usage, you must serialize the data and include `Content-Type` headers as `application/json`
+{% endhint %}
+
+<pre class="language-javascript"><code class="lang-javascript">const form = document.getElementById('form');
+const submitBtn = form.querySelector('button[type="submit"]');
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+<strong>    const formData = new FormData(form);
+</strong><strong>    const object = Object.fromEntries(formData);
+</strong><strong>    const json = JSON.stringify(object);
+</strong>    
+    const originalText = submitBtn.textContent;
+    
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+    
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: json,
+<strong>           headers: {
+</strong><strong>             "Content-Type": "application/json"
+</strong><strong>           }
+</strong>        });
+        
+        const data = await response.json();
+        
+        if (response.ok) {
+            alert("Success! Your message has been sent.");
+            form.reset();
+        } else {
+            alert("Error: " + data.message);
+        }
+        
+    } catch (error) {
+        alert("Something went wrong. Please try again.");
+    } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }
+});
+</code></pre>
 
 ## Usage with React
 
