@@ -42,7 +42,7 @@ To render the Turnstile widget in your form:
 
 ### 4. Add Secret Keys to your Web3Forms Dashboard <a href="#add-the-turnstile-widget-to-your-site" id="add-the-turnstile-widget-to-your-site"></a>
 
-1. Visit the Web3Forms Dashboard and select your form.&#x20;
+1. Visit the Web3Forms Dashboard and select your form: https://app.webforms.com&#x20;
 2. Open Settings and choose `turnstile` as your captcha provider
 3. Enter the **Secret Key** in the Textbox below
 4. Save Changes

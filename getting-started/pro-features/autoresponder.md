@@ -6,6 +6,12 @@ Heads Up! This is a PRO feature. You must have an active subscription to use thi
 
 Autoresponder is available for all Pro/Agency users. Following details can be customised.&#x20;
 
+### Enable Autoreponder
+
+You can enable autoresponder from the Form Settings Page from our dashboard: [https://app.webforms.com](https://app.webforms.com/)
+
+#### Available Options
+
 1. From Name (Company Name)
 2. Autoresponder Subject
 3. Autoresponder Intro Text (eg: Thanks for submitting the form..)

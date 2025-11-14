@@ -10,10 +10,10 @@ description: >-
 
 <figure><img src="../../../.gitbook/assets/CleanShot 2024-06-10 at 14.24.39@2x.png" alt="" width="375"><figcaption><p>hcaptcha solve problem</p></figcaption></figure>
 
-Web3Forms provides zero-config integration with hCaptcha. You don't need to setup your own keys or register with them. Just use the following code and add a script. You're done.&#x20;
+Web3Forms provides zero-config integration with hCaptcha. You don't need to setup your own keys or register with them. Just use the following code and add a script. You're done.
 
 {% hint style="info" %}
-Remember **hCaptcha's** captcha mostly feels a bit difficult for users to solve. In that case, you can either use hCaptcha Paid Plan or use alternatives like hidden [honeypot](spam-protection.md) (less secure) or [reCaptcha](../../pro-features/recaptcha-integration.md) / [Cloudflare Turnstile Captcha](../../pro-features/cloudflare-turnstile-captcha.md) method (Pro).&#x20;
+Remember **hCaptcha's** captcha mostly feels a bit difficult for users to solve. In that case, you can either use hCaptcha Paid Plan or use alternatives like hidden [honeypot](spam-protection.md) (less secure) or [reCaptcha](../../pro-features/recaptcha-integration.md) / [Cloudflare Turnstile Captcha](../../pro-features/cloudflare-turnstile-captcha.md) method (Pro).
 {% endhint %}
 
 **Step 1: Add a \<div> inside your form**
@@ -36,7 +36,7 @@ Remember **hCaptcha's** captcha mostly feels a bit difficult for users to solve.
 
 ### Configuration Options
 
-You can provide all options provided by hCaptcha by default. You need to append the option with `data-*`  attribute. See example below
+You can provide all options provided by hCaptcha by default. You need to append the option with `data-*` attribute. See example below
 
 ```markup
  <div class="h-captcha" 
@@ -53,17 +53,17 @@ For more configuration options, visit: [https://docs.hcaptcha.com/configuration]
 
 ### Activate hCaptcha to your form
 
-Once everything's setup you need to activate hCaptcha on your form to make it mandatory on each form submissions. For that, submit the form by checking the checkbox once and send the form. Now your hCaptcha will be activated.&#x20;
+Once everything's setup you need to activate hCaptcha on your form to make it mandatory on each form submissions. For that, visit the dashboard: [https://app.webforms.com](https://app.webforms.com/) and click on your form and then enable hCaptcha as your preferred captcha&#x20;
 
 {% hint style="info" %}
-Add Client Side Validation as shown below to prevent form submission without checking the hCaptcha field.&#x20;
+Add Client Side Validation as shown below to prevent form submission without checking the hCaptcha field.
 {% endhint %}
 
 ### Client Side Validation
 
-Use this snippet if you are using the HTML form-embedded method without Javascript to check whether the hCaptcha is filled or not.&#x20;
+Use this snippet if you are using the HTML form-embedded method without Javascript to check whether the hCaptcha is filled or not.
 
-Add this code block just above the closing of \</body> and make sure `YOUR_FORM_ID` is updated with your form id.&#x20;
+Add this code block just above the closing of \</body> and make sure `YOUR_FORM_ID` is updated with your form id.
 
 ```html
 <script>
@@ -84,7 +84,7 @@ form.addEventListener('submit', function(e) {
 
 ### Manual Setup
 
-If you want to load hCaptcha directly instead of using web3forms proxy, make sure you use the following **sitekey** for free plans. You can set your own site key and secret key on all paid plans,&#x20;
+If you want to load hCaptcha directly instead of using web3forms proxy, make sure you use the following **sitekey** for free plans. You can set your own site key and secret key on all paid plans,
 
 ```javascript
 // hCaptcha Site Key for Web3Forms
@@ -110,13 +110,13 @@ data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
 <script src="https://web3forms.com/client/script.js" async defer></script>
 ```
 
-If you add just two lines to your contact form, you will get a working hCaptcha to protect your form.&#x20;
+If you add just two lines to your contact form, you will get a working hCaptcha to protect your form.
 
 ## Usage with React / Next.js
 
-To use hCaptcha with React or Next.js, please follow the instructions below.&#x20;
+To use hCaptcha with React or Next.js, please follow the instructions below.
 
-First, install the [@hcaptcha/react-hcaptcha ](https://www.npmjs.com/package/@hcaptcha/react-hcaptcha)package from NPM.&#x20;
+First, install the [@hcaptcha/react-hcaptcha ](https://www.npmjs.com/package/@hcaptcha/react-hcaptcha)package from NPM.
 
 ```bash
 npm install @hcaptcha/react-hcaptcha --save
@@ -124,11 +124,11 @@ npm install @hcaptcha/react-hcaptcha --save
 pnpm add @hcaptcha/react-hcaptcha
 ```
 
-Then, add the \<HCaptcha/> component inside the form.&#x20;
+Then, add the \<HCaptcha/> component inside the form.
 
-Make sure you are using `50b2fe65-b00b-4b9e-ad62-3ba471098be2`as the `sitekey` for free plans. Also make sure `reCaptchaCompat` is false.&#x20;
+Make sure you are using `50b2fe65-b00b-4b9e-ad62-3ba471098be2`as the `sitekey` for free plans. Also make sure `reCaptchaCompat` is false.
 
-You can use a custom site key if you are on a Paid plan.&#x20;
+You can use a custom site key if you are on a Paid plan.
 
 <pre class="language-jsx"><code class="lang-jsx">import { useForm } from "react-hook-form";
 <strong>import HCaptcha from '@hcaptcha/react-hcaptcha';
@@ -161,7 +161,7 @@ return (
 )}
 </code></pre>
 
-That's it.&#x20;
+That's it.
 
 Make sure you have enabled `hcaptcha` as the Block Spam option in the settings. Login to your dashboard to change it if not enabled already.
 
@@ -169,4 +169,4 @@ Make sure you have enabled `hcaptcha` as the Block Spam option in the settings. 
 
 You can see the following guide for more examples. Just make sure you are using the correct `sitekey` as mentioned above.\
 \
-[https://www.npmjs.com/package/@hcaptcha/react-hcaptcha](https://www.npmjs.com/package/@hcaptcha/react-hcaptcha)&#x20;
+[https://www.npmjs.com/package/@hcaptcha/react-hcaptcha](https://www.npmjs.com/package/@hcaptcha/react-hcaptcha)
