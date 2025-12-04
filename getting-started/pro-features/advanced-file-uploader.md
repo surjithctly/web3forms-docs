@@ -25,8 +25,7 @@ Our Default HTML5 File Uploader only supports file attachments up to 5 MB. Also 
 </code></pre>
 
 {% hint style="danger" %}
-For advanced uploader, `enctype=""` is not required and must be removed from the `<form>`\
-
+For advanced uploader, `enctype=""` is not required and must be removed from the `<form>`<br>
 {% endhint %}
 
 **Step 2: Add the following script before the closing of \</body>**
@@ -43,6 +42,7 @@ You can configure some options in the advanced uploader like multiple, accept ty
 ```html
  <input type="file" 
  name="attachment"
+ data-form-id="YOUR_ACCESS_KEY_OR_FORM_ID_HERE" (required if not added in `form` )
  data-advanced="true"                       (enable advanced file upload)
  accept="image/*, application/pdf"          (accept only some file types)
  data-max-files="3"                         (Total number of files allowed)
@@ -50,6 +50,8 @@ You can configure some options in the advanced uploader like multiple, accept ty
  data-content="Drag & Drop or <i>Browse<i>" (Custom Label in your language)
   />
 ```
+
+⚠️ **Note on `data-form-id` :** We will try to get the form-id  from your form action URL or access key from the hidden `access_key` input inside `<form>`. if you are using them dynamically or in other places, you need to fill that here as well.&#x20;
 
 ### Live Demo on Codepen
 
