@@ -140,13 +140,19 @@ To prevent spam & abuse, we block certain domains, sub-domains & LTDs by default
 
 To approve certain free sub-domains provided by some platforms won't be approved. So please add a custom domain and contact us if its not working. Otherwise, you would need a paid plan to allow the free sub-domain.&#x20;
 
-## 403: Forbidden
+## 403 : This method is not allowed
 
-In some rare cases, you/your customers might receive `{ message: forbidden }` error with HTTP code `403`  from our server. This is usually because the IP address might have triggered our firewall. This usually happens when the IP has been previously blacklisted for Spam activity. Sometimes, It happens on broadband connections with pooled IP as well.
+Web3Forms API is expected to run on client side for spam prevention. If you call the API on the server side, you might get this method is not allowed error.&#x20;
 
-If you got this error and you think it's a mistake, please contact support for further assistance.&#x20;
+To fix this, make sure you run our API on the client side. Our API fetch should be visible in the network tab in browser developer console. Do not proxy it in another API or server side code. The access key can be public and safe to add in client side code.&#x20;
 
+If your use-case require you to use server side code, then you must add your server IP address to our Safelist + you must have an active **Paid** subscription. Please contact support with your server IP to activate server side API calls.&#x20;
 
+## 429: Rate limited because of too many requests
 
+When we detect too many requests from single IP address in a short period of time, we block the IP for a certain period temporarily to prevent spamming or abuse of our system.&#x20;
 
+If you get this error, which means you tried to submit forms too many times quickly. Please wait for one hour and try again. For testing, make sure you take some time for each submissions to avoid rate-limits.&#x20;
+
+Rate-limits for your IP address will be removed automatically after one hour.&#x20;
 
