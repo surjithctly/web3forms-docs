@@ -42,6 +42,7 @@ Send form data to any URL endpoint via HTTP POST. Compatible with Zapier, Make (
 ### Data Management
 - **Google Sheets**: Organize submissions in spreadsheets
 - **Airtable**: Store form data in a flexible database
+- **Notion**: Manage submissions in your all-in-one workspace
 
 [View data management examples →](examples/)
 

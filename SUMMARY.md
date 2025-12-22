@@ -45,6 +45,7 @@
   * [Examples](getting-started/examples/README.md)
     * [Google Sheets](getting-started/integrations/examples/google-sheets.md)
     * [Airtable](getting-started/integrations/examples/airtable.md)
+    * [Notion](getting-started/integrations/examples/notion.md)
     * [Telegram Notifications](getting-started/integrations/examples/telegram-notifications.md)
 * [Options Reference](getting-started/options-reference.md)
 * [API Reference](getting-started/api-reference.md)
