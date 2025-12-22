@@ -159,7 +159,7 @@ Connect Web3Forms with 5,000+ apps using Zapier:
 5. Paste it in Web3Forms webhook settings
 6. Test and configure your automation
 
-[Learn more about Zapier integration →](../integrations/soon/zapier.md)
+[Learn more about Zapier integration →](soon/zapier.md)
 
 ### Make (Integromat)
 
@@ -172,7 +172,7 @@ Build complex automation scenarios:
 5. Add it to Web3Forms
 6. Build your automation workflow
 
-[Learn more about Make integration →](../integrations/soon/integromat.md)
+[Learn more about Make integration →](soon/integromat.md)
 
 ### Pipedream
 
@@ -311,10 +311,10 @@ In your webhook handler:
 
 ## Related Integrations
 
-* [Google Sheets Integration](../integrations/google-sheets.md) - Direct spreadsheet sync
-* [Slack Integration](../integrations/slack.md) - Team notifications
-* [Discord Integration](../integrations/discord.md) - Community notifications
-* [Telegram Integration](../integrations/telegram-notifications.md) - Mobile notifications
+* [Google Sheets Integration](google-sheets.md) - Direct spreadsheet sync
+* [Slack Integration](slack.md) - Team notifications
+* [Discord Integration](discord.md) - Community notifications
+* [Telegram Integration](telegram-notifications.md) - Mobile notifications
 
 ## Additional Resources
 

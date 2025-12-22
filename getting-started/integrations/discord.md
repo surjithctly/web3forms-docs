@@ -8,11 +8,11 @@ This is a **PRO feature**. You must have an active PRO plan subscription to use 
 
 ## Features
 
-- ✅ **Real-time Notifications**: Receive form submissions instantly in Discord
-- ✅ **Server Integration**: Send to any channel in your Discord server
-- ✅ **Rich Embeds**: Beautiful, formatted message embeds
-- ✅ **Community Engagement**: Keep your community informed
-- ✅ **Easy Setup**: Connect with just a webhook URL
+* ✅ **Real-time Notifications**: Receive form submissions instantly in Discord
+* ✅ **Server Integration**: Send to any channel in your Discord server
+* ✅ **Rich Embeds**: Beautiful, formatted message embeds
+* ✅ **Community Engagement**: Keep your community informed
+* ✅ **Easy Setup**: Connect with just a webhook URL
 
 ## Setup Instructions
 
@@ -27,17 +27,15 @@ To receive notifications, you need to create a webhook in your Discord server:
 5. Click **Webhooks** or **Create Webhook**
 6. Click **New Webhook** button
 
-**[SCREENSHOT PLACEHOLDER: Discord channel settings showing Integrations tab]**
-
 ### Step 2: Configure the Webhook
 
-1. Give your webhook a name (e.g., "Web3Forms Notifications")
+1. Give your webhook a name (e.g., "Web3Forms Bot")
 2. Optionally, upload a custom avatar for the webhook
 3. Select the channel where notifications should be posted
 4. Click **Copy Webhook URL**
 5. The URL will look like: `https://discord.com/api/webhooks/123456789/XXXXXXXXXXXX`
 
-**[SCREENSHOT PLACEHOLDER: Discord webhook configuration interface]**
+<figure><img src="../../.gitbook/assets/CleanShot 2025-12-22 at 20.39.05@2x.png" alt=""><figcaption></figcaption></figure>
 
 ### Step 3: Configure Web3Forms Integration
 
@@ -49,7 +47,7 @@ To receive notifications, you need to create a webhook in your Discord server:
 6. Paste your Webhook URL in the **Webhook URL** field
 7. Click the **Save Settings** button
 
-**[SCREENSHOT PLACEHOLDER: Discord integration card in Web3Forms dashboard]**
+<figure><img src="../../.gitbook/assets/CleanShot 2025-12-22 at 20.39.51@2x.png" alt=""><figcaption></figcaption></figure>
 
 ## How It Works
 
@@ -62,29 +60,8 @@ To receive notifications, you need to create a webhook in your Discord server:
 
 Each form submission sends a rich embed message to Discord with:
 
-- **Title**: "New Form Submission" with timestamp
-- **Fields**: All submitted form data (name, email, message, etc.)
-- **Color**: Distinctive color coding for visibility
-- **Footer**: Form name and submission time
-
-**[SCREENSHOT PLACEHOLDER: Example Discord embed message showing form submission]**
-
-## Use Cases
-
-### Community Projects
-Receive feedback and suggestions from your community members in a dedicated channel.
-
-### Developer Communities
-Get bug reports and feature requests directly in your Discord server.
-
-### Gaming Communities
-Collect applications, reports, or feedback from your gaming community.
-
-### Support Channels
-Route support requests to a dedicated support channel for community helpers.
-
-### Event Registrations
-Notify your server when someone registers for community events or tournaments.
+* "New Form Submission" Title
+* **Fields**: All submitted form data (name, email, message, etc.)
 
 ## Managing Your Integration
 
@@ -120,19 +97,19 @@ To completely remove the webhook from Discord:
 
 If you're not receiving Discord notifications:
 
-- **Verify Webhook URL**: Ensure the URL is correct and complete
-- **Check Integration Status**: Make sure the toggle is enabled in Web3Forms
-- **Test the Webhook**: Send a test message using Discord's webhook testing
-- **Check Channel**: Ensure you're looking at the correct Discord channel
-- **Webhook Deleted**: Verify the webhook still exists in Discord settings
-- **Test Your Form**: Submit a test entry and wait a few seconds
+* **Verify Webhook URL**: Ensure the URL is correct and complete
+* **Check Integration Status**: Make sure the toggle is enabled in Web3Forms
+* **Test the Webhook**: Send a test message using Discord's webhook testing
+* **Check Channel**: Ensure you're looking at the correct Discord channel
+* **Webhook Deleted**: Verify the webhook still exists in Discord settings
+* **Test Your Form**: Submit a test entry and wait a few seconds
 
 ### Invalid Webhook URL Error
 
-- Make sure you copied the entire webhook URL
-- URLs should start with `https://discord.com/api/webhooks/`
-- Don't include any extra spaces or characters
-- Generate a new webhook URL if the old one isn't working
+* Make sure you copied the entire webhook URL
+* URLs should start with `https://discord.com/api/webhooks/`
+* Don't include any extra spaces or characters
+* Generate a new webhook URL if the old one isn't working
 
 ### Webhook Not Found Error
 
@@ -144,18 +121,18 @@ This means the webhook was deleted from Discord:
 
 ### Messages Not Appearing
 
-- Check Discord channel permissions
-- Ensure the webhook has permission to post in the channel
-- Verify you haven't muted the channel
-- Check if Discord is filtering webhook messages
+* Check Discord channel permissions
+* Ensure the webhook has permission to post in the channel
+* Verify you haven't muted the channel
+* Check if Discord is filtering webhook messages
 
 ## Privacy & Security
 
-- Your webhook URL is stored securely and encrypted
-- Only form submission data is sent to Discord
-- No access keys or sensitive credentials are exposed
-- You can delete webhook URLs anytime in Discord settings
-- Webhook URLs are specific to your Discord server
+* Your webhook URL is stored securely and encrypted
+* Only form submission data is sent to Discord
+* No access keys or sensitive credentials are exposed
+* You can delete webhook URLs anytime in Discord settings
+* Webhook URLs are specific to your Discord server
 
 ## Advanced Tips
 
@@ -173,49 +150,21 @@ Customize your Discord webhook:
 
 Best practices for organizing notifications:
 
-- Create a dedicated `#form-submissions` channel
-- Use channel categories to organize different form types
-- Set up channel permissions to control who sees submissions
-- Use thread creation for discussion on specific submissions
+* Create a dedicated `#form-submissions` channel
+* Use channel categories to organize different form types
+* Set up channel permissions to control who sees submissions
+* Use thread creation for discussion on specific submissions
 
-### Multiple Webhooks
 
-To send notifications to multiple channels:
-
-1. Create separate webhooks for each channel
-2. Use different forms for different notification channels
-3. Or use the [Webhook integration](../pro-features/webhooks.md) for more complex routing
-
-### Webhook Security
-
-Protect your webhook URL:
-
-- Don't share webhook URLs publicly
-- Regenerate webhook URLs if compromised
-- Use channel permissions to restrict access
-- Monitor the webhook activity regularly
-
-### Discord Bots vs Webhooks
-
-Webhooks are simpler than bots:
-- **Webhooks**: One-way notifications (no interaction needed)
-- **Bots**: Two-way communication (can respond and interact)
-- For form notifications, webhooks are perfect and easier to set up
 
 ## Related Integrations
 
-- [Slack Integration](slack.md) - Team notifications in Slack
-- [Telegram Integration](examples/telegram-notifications.md) - Mobile notifications via Telegram
-- [Webhook Integration](../pro-features/webhooks.md) - Send to custom endpoints
+* [Slack Integration](slack.md) - Team notifications in Slack
+* [Telegram Integration](telegram-notifications.md) - Mobile notifications via Telegram
+* [Webhook Integration](../pro-features/webhooks.md) - Send to custom endpoints
 
 ## Additional Resources
 
-- [Discord Webhooks Documentation](https://discord.com/developers/docs/resources/webhook)
-- [Discord Server Setup Guide](https://support.discord.com/hc/en-us/articles/206346498)
+* [Discord Webhooks Documentation](https://discord.com/developers/docs/resources/webhook)
+* [Discord Server Setup Guide](https://support.discord.com/hc/en-us/articles/206346498)
 
-## Need Help?
-
-If you encounter any issues with the Discord integration:
-- Check [Discord's webhook documentation](https://discord.com/developers/docs/resources/webhook)
-- Email [support@web3forms.com](mailto:support@web3forms.com)
-- [Contribute to our documentation on Github](https://github.com/surjithctly/web3forms-docs)

@@ -10,12 +10,12 @@ This integration uses **Webhooks**, which is a PRO feature. You must have an act
 
 [Zapier](https://zapier.com/) is a popular automation platform that connects different apps and services together. With Zapier, you can automatically send your Web3Forms submissions to thousands of other apps including:
 
-- **CRM**: Salesforce, HubSpot, Pipedrive, Zoho CRM
-- **Email Marketing**: Mailchimp, ConvertKit, ActiveCampaign
-- **Spreadsheets**: Google Sheets, Airtable, Excel Online
-- **Communication**: Slack, Discord, Microsoft Teams
-- **Project Management**: Trello, Asana, ClickUp, Monday.com
-- **And 5,000+ more apps**
+* **CRM**: Salesforce, HubSpot, Pipedrive, Zoho CRM
+* **Email Marketing**: Mailchimp, ConvertKit, ActiveCampaign
+* **Spreadsheets**: Google Sheets, Airtable, Excel Online
+* **Communication**: Slack, Discord, Microsoft Teams
+* **Project Management**: Trello, Asana, ClickUp, Monday.com
+* **And 5,000+ more apps**
 
 ## Setup Instructions
 
@@ -30,7 +30,7 @@ This integration uses **Webhooks**, which is a PRO feature. You must have an act
 1. Click **Create Zap** in your Zapier dashboard
 2. Give your Zap a descriptive name (e.g., "Web3Forms to Google Sheets")
 
-**[SCREENSHOT PLACEHOLDER: Zapier dashboard with Create Zap button]**
+**\[SCREENSHOT PLACEHOLDER: Zapier dashboard with Create Zap button]**
 
 ### Step 3: Set Up the Trigger
 
@@ -39,7 +39,7 @@ This integration uses **Webhooks**, which is a PRO feature. You must have an act
 3. Choose **Catch Hook** as the trigger event
 4. Click **Continue**
 
-**[SCREENSHOT PLACEHOLDER: Zapier webhook trigger selection]**
+**\[SCREENSHOT PLACEHOLDER: Zapier webhook trigger selection]**
 
 ### Step 4: Copy the Webhook URL
 
@@ -48,7 +48,7 @@ This integration uses **Webhooks**, which is a PRO feature. You must have an act
 3. Click **Copy** to copy the webhook URL
 4. Keep this tab open, you'll need it in a moment
 
-**[SCREENSHOT PLACEHOLDER: Zapier webhook URL displayed]**
+**\[SCREENSHOT PLACEHOLDER: Zapier webhook URL displayed]**
 
 ### Step 5: Add Webhook to Web3Forms
 
@@ -60,7 +60,7 @@ This integration uses **Webhooks**, which is a PRO feature. You must have an act
 6. Paste the Zapier webhook URL in the **Webhook URL** field
 7. Click **Save Settings**
 
-**[SCREENSHOT PLACEHOLDER: Web3Forms webhook integration settings]**
+**\[SCREENSHOT PLACEHOLDER: Web3Forms webhook integration settings]**
 
 ### Step 6: Test the Connection
 
@@ -70,7 +70,7 @@ This integration uses **Webhooks**, which is a PRO feature. You must have an act
 4. Zapier will catch the webhook and display the test data
 5. Click **Continue** once you see the test data
 
-**[SCREENSHOT PLACEHOLDER: Zapier showing caught webhook data]**
+**\[SCREENSHOT PLACEHOLDER: Zapier showing caught webhook data]**
 
 ### Step 7: Set Up the Action
 
@@ -81,7 +81,7 @@ This integration uses **Webhooks**, which is a PRO feature. You must have an act
 5. Test the action
 6. Click **Publish** to activate your Zap
 
-**[SCREENSHOT PLACEHOLDER: Zapier action configuration with field mapping]**
+**\[SCREENSHOT PLACEHOLDER: Zapier action configuration with field mapping]**
 
 ## Popular Zap Templates
 
@@ -90,6 +90,7 @@ This integration uses **Webhooks**, which is a PRO feature. You must have an act
 **Use Case**: Automatically add form submissions to a Google Sheets spreadsheet
 
 **Setup**:
+
 1. Trigger: Webhooks by Zapier → Catch Hook
 2. Action: Google Sheets → Create Spreadsheet Row
 3. Map fields: Name → Name, Email → Email, Message → Message
@@ -99,6 +100,7 @@ This integration uses **Webhooks**, which is a PRO feature. You must have an act
 **Use Case**: Automatically add email subscribers to your Mailchimp audience
 
 **Setup**:
+
 1. Trigger: Webhooks by Zapier → Catch Hook
 2. Action: Mailchimp → Add/Update Subscriber
 3. Map email field and any custom fields
@@ -108,6 +110,7 @@ This integration uses **Webhooks**, which is a PRO feature. You must have an act
 **Use Case**: Create a Trello card for each form submission
 
 **Setup**:
+
 1. Trigger: Webhooks by Zapier → Catch Hook
 2. Action: Trello → Create Card
 3. Use form data to populate card title and description
@@ -117,6 +120,7 @@ This integration uses **Webhooks**, which is a PRO feature. You must have an act
 **Use Case**: Notify your team in Slack about new submissions
 
 **Setup**:
+
 1. Trigger: Webhooks by Zapier → Catch Hook
 2. Action: Slack → Send Channel Message
 3. Format message with form data
@@ -126,6 +130,7 @@ This integration uses **Webhooks**, which is a PRO feature. You must have an act
 **Use Case**: Automatically create leads in your CRM
 
 **Setup**:
+
 1. Trigger: Webhooks by Zapier → Catch Hook
 2. Action: Your CRM → Create Lead/Contact
 3. Map all relevant form fields
@@ -154,39 +159,43 @@ Create complex workflows with multiple actions:
 ### Field Mapping
 
 When mapping fields:
-- Use the exact field names from your form
-- Check the data preview to ensure correct mapping
-- Test thoroughly before publishing
+
+* Use the exact field names from your form
+* Check the data preview to ensure correct mapping
+* Test thoroughly before publishing
 
 ### Error Handling
 
 Set up error notifications:
-- Add your email to Zap error notifications
-- Monitor your Zap history regularly
-- Fix failing Zaps promptly
+
+* Add your email to Zap error notifications
+* Monitor your Zap history regularly
+* Fix failing Zaps promptly
 
 ### Data Formatting
 
 Format data correctly:
-- Use Zapier's Formatter tool for date/time conversions
-- Clean up text fields (trim whitespace, change case)
-- Split full names into first/last names if needed
+
+* Use Zapier's Formatter tool for date/time conversions
+* Clean up text fields (trim whitespace, change case)
+* Split full names into first/last names if needed
 
 ### Filters
 
 Use filters to control when Zaps run:
-- Only process submissions with specific values
-- Skip test submissions
-- Route different types of submissions differently
+
+* Only process submissions with specific values
+* Skip test submissions
+* Route different types of submissions differently
 
 ## Pricing
 
 Zapier offers several pricing tiers:
 
-- **Free**: 100 tasks/month, single-step Zaps
-- **Starter**: $19.99/month, 750 tasks/month, multi-step Zaps
-- **Professional**: $49/month, 2,000 tasks/month, advanced features
-- **Team**: $299/month, 50,000 tasks/month, team collaboration
+* **Free**: 100 tasks/month, single-step Zaps
+* **Starter**: $19.99/month, 750 tasks/month, multi-step Zaps
+* **Professional**: $49/month, 2,000 tasks/month, advanced features
+* **Team**: $299/month, 50,000 tasks/month, team collaboration
 
 {% hint style="info" %}
 Each form submission counts as 1 task in Zapier. Multi-step Zaps count each action as an additional task.
@@ -196,91 +205,55 @@ Each form submission counts as 1 task in Zapier. Multi-step Zaps count each acti
 
 ### Webhook Not Triggering
 
-- Verify the webhook URL is correct in Web3Forms
-- Ensure the webhook integration is enabled (toggle on)
-- Check that your Zap is turned on
-- Submit a test form to trigger the webhook
+* Verify the webhook URL is correct in Web3Forms
+* Ensure the webhook integration is enabled (toggle on)
+* Check that your Zap is turned on
+* Submit a test form to trigger the webhook
 
 ### No Data Showing in Zapier
 
-- Make sure you submitted the form after setting up the webhook
-- Check that the form includes all expected fields
-- Review the webhook payload in Zapier's history
+* Make sure you submitted the form after setting up the webhook
+* Check that the form includes all expected fields
+* Review the webhook payload in Zapier's history
 
 ### Zap Errors
 
 Common errors and solutions:
 
 **"Could not find record"**
-- Check that the destination record exists
-- Verify account connections are active
+
+* Check that the destination record exists
+* Verify account connections are active
 
 **"Required field missing"**
-- Ensure all required fields are mapped
-- Provide default values for optional fields
+
+* Ensure all required fields are mapped
+* Provide default values for optional fields
 
 **"Invalid format"**
-- Use Zapier's Formatter to convert data types
-- Check date/time formats match expectations
+
+* Use Zapier's Formatter to convert data types
+* Check date/time formats match expectations
 
 ### Rate Limits
 
 If hitting Zapier task limits:
-- Upgrade to a higher plan
-- Use filters to reduce unnecessary tasks
-- Consolidate multiple Zaps
+
+* Upgrade to a higher plan
+* Use filters to reduce unnecessary tasks
+* Consolidate multiple Zaps
 
 ## Alternatives to Zapier
 
 If Zapier doesn't fit your needs, consider:
 
-- **[Make (Integromat)](integromat.md)** - More complex automation, better free tier
-- **[Pipedream](https://pipedream.com/)** - Developer-friendly with code support
-- **[n8n](https://n8n.io/)** - Open-source, self-hostable
-- **Custom Webhooks** - Build your own integration
-
-## Advanced Use Cases
-
-### Lead Scoring
-
-1. Catch webhook
-2. Analyze submission data
-3. Calculate lead score based on criteria
-4. Route high-value leads to sales team
-5. Route low-value leads to nurture campaign
-
-### Data Enrichment
-
-1. Catch webhook
-2. Look up company data via Clearbit/Hunter
-3. Enrich contact information
-4. Add to CRM with enriched data
-
-### Multi-Channel Notifications
-
-1. Catch webhook
-2. Send to Slack
-3. Send to Discord
-4. Send to Telegram
-5. Create calendar event for follow-up
+* [**Make (Integromat)**](integromat.md) - More complex automation, better free tier
+* [**Pipedream**](https://pipedream.com/) - Developer-friendly with code support
+* [**n8n**](https://n8n.io/) - Open-source, self-hostable
+* **Custom Webhooks** - Build your own integration
 
 ## Related Resources
 
-- [Webhooks Documentation](../pro-features/webhooks.md) - Complete webhook guide
-- [Make (Integromat) Integration](integromat.md) - Alternative automation platform
-- [Google Sheets Integration](examples/google-sheets.md) - Direct spreadsheet sync
-
-## External Links
-
-- [Zapier Official Website](https://zapier.com/)
-- [Zapier Webhooks Documentation](https://zapier.com/page/webhooks/)
-- [Zapier App Directory](https://zapier.com/apps)
-- [Zapier University](https://learn.zapier.com/)
-
-## Need Help?
-
-If you encounter any issues with Zapier integration:
-- Check [Zapier's support documentation](https://help.zapier.com/)
-- Email [support@web3forms.com](mailto:support@web3forms.com)
-- [Contribute to our documentation on Github](https://github.com/surjithctly/web3forms-docs)
-
+* [Webhooks Documentation](../../pro-features/webhooks.md) - Complete webhook guide
+* [Make (Integromat) Integration](integromat.md) - Alternative automation platform
+* [Google Sheets Integration](../google-sheets.md) - Direct spreadsheet sync
