@@ -11,7 +11,7 @@ Autoresponder is available for all Pro/Agency users. Following details can be cu
 You can enable autoresponder from the Form Settings Page from our dashboard: [https://app.webforms.com](https://app.webforms.com/)
 
 {% hint style="info" %}
-Autoresponder will only run on **production** websites. It will not work on localhost / preview environments.&#x20;
+Autoresponder will only work on **production** websites. It will not work on localhost and some preview environments.&#x20;
 {% endhint %}
 
 #### Available Options
