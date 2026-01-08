@@ -23,9 +23,13 @@ By default, Web3Forms redirects to our website after form submission, However if
 <!-- Custom URL -->
 <input type="hidden" name="redirect" value="https://yourwebsite.com/thanks.html">
 
-<!-- Redirect to another website -->
+<!-- Redirect to another website (Requires a Paid Plan) -->
 <input type="hidden" name="redirect" value="https://partnerwebsite.com/someaction/">
 ```
+
+{% hint style="info" %}
+Cross domain redirection requires a paid plan. Free users must use same domain for redirection.&#x20;
+{% endhint %}
 
 Also, make sure you provide full URL as the value instead of relative URL
 
