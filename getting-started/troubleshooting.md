@@ -10,17 +10,35 @@ Form Submission Emails are sent instantly and will reach your inbox in seconds. 
 
 Once you have received the email, it is recommended to drag the email to your Primary Inbox and press "YES" when asked if you want to mark future emails as important. So all future emails from our `notify+{hash}@web3forms.com` will reach your primary inbox.&#x20;
 
-#### **Bounced Emails**
+### **Bounced Emails**
 
 Another chance is that sometimes the email might be bounced. Thus it will prevent all subsequent request to that particular email. This usally happens when you create an Access key before the email is configured. \
 \
 If that's the case, [contact support](https://web3forms.com/help?contact=true) and we will remove it from the **suppression list**.&#x20;
 
+### Missing MX Records
+
+Make sure your domain has proper MX records set as suggested by your email provider. If no MX records found, we cannot deliver your message.&#x20;
+
+Verify your MX records here:
+
+{% embed url="https://dnschecker.org/mx-lookup.php" %}
+
+{% embed url="https://mxtoolbox.com/MXLookup.aspx" %}
+
+#### Google Workspace issues
+
+If you are using Google workspace, [check this link](https://support.google.com/a/answer/16004259?sjid=8694392699073914797-NC\&visit_id=639034785281386808-3518368676\&rd=1) to setup MX records for your email domain. Also make sure web3forms.com domain is allowed:&#x20;
+
+Contact Your Email Admin: If you are part of a larger organization, please check with your Google Workspace administrator to see if there are any current network issues or aggressive filtering rules for incoming mail.
+
+Check: Google Workspace > Gmail > Spam, Phishing, and Malware screen
+
 ## Email received without any data
 
 Ensure you have added a `name` attribute to each of your form elements. Form data is processed only if `name` attribute is present in the formData.&#x20;
 
-```markup
+```html
 <!-- ❌ Wrong -->
 
 <label>Full Name</label>
