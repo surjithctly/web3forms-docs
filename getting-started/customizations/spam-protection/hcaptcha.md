@@ -53,7 +53,7 @@ For more configuration options, visit: [https://docs.hcaptcha.com/configuration]
 
 ### Activate hCaptcha to your form
 
-Once everything's setup you need to activate hCaptcha on your form to make it mandatory on each form submissions. For that, visit the dashboard: [https://app.webforms.com](https://app.webforms.com/) and click on your form and then enable hCaptcha as your preferred captcha&#x20;
+Once everything's setup you need to activate hCaptcha on your form to make it mandatory on each form submissions. For that, visit the dashboard: [https://app.web3forms.com](https://app.web3forms.com/) and click on your form and then enable hCaptcha as your preferred captcha.&#x20;
 
 {% hint style="info" %}
 Add Client Side Validation as shown below to prevent form submission without checking the hCaptcha field.
