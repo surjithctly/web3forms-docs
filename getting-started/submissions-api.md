@@ -37,10 +37,10 @@ A key is scoped to your account and works for any form you own.
 
 ### Permissions
 
-| Permission             | Grants                                                           |
-| ---------------------- | ---------------------------------------------------------------- |
+| Permission             | Grants                                                                     |
+| ---------------------- | -------------------------------------------------------------------------- |
 | **Read submissions**   | `GET /forms`, `GET /submissions`, `GET /submissions/{id}`. Always enabled. |
-| **Create submissions** | `POST /submissions`. Opt-in when you create the key.             |
+| **Create submissions** | `POST /submissions`. Opt-in when you create the key.                       |
 
 Keys are read-only unless you tick **Create submissions**. A key without that permission gets `403` on `POST /submissions`.
 
@@ -172,26 +172,26 @@ curl "https://api.web3forms.com/v1/submissions/sub_a1b2c3d4e5f6" \
 
 Submits a form from your own server. The submission is processed exactly like one sent from a browser: it's stored, your notification email and autoresponder go out, and your integrations run.
 
-Requires a key with the **Create submissions** permission.
+Requires a Secret API key with the **WRITE** permission.
 
 {% hint style="info" %}
-Use this when the data never passes through a browser — a server-side form handler, a CRM sync, a queue worker, an AI agent. For normal HTML forms, keep posting to [the regular endpoint](installation.md): it's free, needs no API key, and your access key is safe to expose.
+Use this when the data never passes through a browser — a server-side form handler, a CRM sync, a queue worker, an AI agent. For normal HTML forms, keep posting to [the regular endpoint](installation.md) with public access key.
 {% endhint %}
 
 #### Body Parameters
 
-| Name                                     | Type   | Description                                                                                              |
-| ---------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------- |
-| form_id<mark style="color:red;">\*</mark> | string | The form to submit to. Must be a form you own.                                                            |
-| fields<mark style="color:red;">\*</mark>  | object | Your form fields as name/value pairs. At least 1, at most 100.                                            |
-| subject                                  | string | Overrides the notification email subject.                                                                 |
-| from\_name                               | string | Overrides the sender name.                                                                                |
-| replyto                                  | string | Reply-To address for the notification email.                                                              |
-| cc                                       | string | CC address.                                                                                               |
-| bcc                                      | string | BCC address.                                                                                              |
-| preheader                                | string | Email preheader text.                                                                                     |
-| metadata                                 | object | Attribution for the original submitter: `ip`, `user_agent`, `site_url`. See [Passing the real submitter](#passing-the-real-submitter). |
-| attachments                              | array  | Files to attach. See [Attachments](#attachments).                                                          |
+| Name                                       | Type   | Description                                                                                                                                              |
+| ------------------------------------------ | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| form\_id<mark style="color:red;">\*</mark> | string | The form to submit to. Must be a form you own.                                                                                                           |
+| fields<mark style="color:red;">\*</mark>   | object | Your form fields as name/value pairs. At least 1, at most 100.                                                                                           |
+| subject                                    | string | Overrides the notification email subject.                                                                                                                |
+| from\_name                                 | string | Overrides the sender name.                                                                                                                               |
+| replyto                                    | string | Reply-To address for the notification email.                                                                                                             |
+| cc                                         | string | CC address.                                                                                                                                              |
+| bcc                                        | string | BCC address.                                                                                                                                             |
+| preheader                                  | string | Email preheader text.                                                                                                                                    |
+| metadata                                   | object | Attribution for the original submitter: `ip`, `user_agent`, `site_url`. See [Passing the real submitter](submissions-api.md#passing-the-real-submitter). |
+| attachments                                | array  | Files to attach. See [Attachments](submissions-api.md#attachments).                                                                                      |
 
 #### Example
 
@@ -224,7 +224,7 @@ curl -X POST https://api.web3forms.com/v1/submissions \
 }
 ```
 
-Use that `id` with [Get a submission](#get-a-submission) to read the stored record back.
+Use that `id` with [Get a submission](submissions-api.md#get-a-submission) to read the stored record back.
 
 ### Form fields go in `fields`
 
@@ -237,12 +237,6 @@ Everything the person filled in belongs inside `fields`. Email options like `sub
   "subject": "New support request"
 }
 ```
-
-Here `fields.subject` is stored as a form field named "subject", while the top-level `subject` sets the email subject line — they don't collide.
-
-Reserved names are **rejected** inside `fields` with a `400`, because they would otherwise be read as instructions rather than data:
-
-`access_key`, `apikey`, `form_id`, `botcheck`, `webhook`, `redirect`, `files`, `attachment`, `subject`, `from_name`, `replyto`, `ccemail`, `bccemail`, `preheader`, and the captcha response fields.
 
 ### Passing the real submitter
 
@@ -286,23 +280,23 @@ Up to **10 files**, **5 MB total** (measured after decoding). Files are stored a
 
 Because the API key already proves you own the form, the browser-oriented guards don't apply:
 
-| Not applied                    | Why                                                        |
-| ------------------------------ | ---------------------------------------------------------- |
-| Captcha                        | A server has no captcha token. Works even on forms that require one for browsers. |
-| Domain / referer restrictions  | There's no referring page to check.                        |
-| Per-IP rate limit              | All your calls come from one server. The per-form limit still applies. |
+| Not applied                   | Why                                                                               |
+| ----------------------------- | --------------------------------------------------------------------------------- |
+| Captcha                       | A server has no captcha token. Works even on forms that require one for browsers. |
+| Domain / referer restrictions | There's no referring page to check.                                               |
+| Per-IP rate limit             | All your calls come from one server. The per-form limit still applies.            |
 
 Everything else is unchanged: submissions **count toward your monthly quota**, spam filtering still runs, and your form's per-hour rate limit still applies.
 
 {% hint style="warning" %}
-There's no idempotency key. If a request times out and you retry it, you may create a duplicate submission — check [List submissions](#list-submissions) before retrying, or de-duplicate on your side.
+There's no idempotency key. If a request times out and you retry it, you may create a duplicate submission — check [List submissions](submissions-api.md#list-submissions) before retrying, or de-duplicate on your side.
 {% endhint %}
 
 {% hint style="danger" %}
-Never put an API key in frontend code, a mobile app, or a public repo. Anyone holding a key with **Create submissions** can post to every form on your account and burn your quota. Call this endpoint from your server only.
+Never put an API key in frontend code, a mobile app, or a public repo. Anyone holding a key with WRITE can post to every form on your account and burn your quota. Call this endpoint from your server only.
 {% endhint %}
 
----
+***
 
 ## Errors
 
@@ -317,15 +311,15 @@ Errors return a non-2xx status and a JSON body:
 }
 ```
 
-| Status | Code                   | Meaning                                                              |
-| ------ | ---------------------- | -------------------------------------------------------------------- |
-| `400`  | `bad_request`          | Missing or invalid parameter (e.g. no `form_id`, a reserved field name) |
-| `400`  | `submission_rejected`  | The submission was refused — see `message` (quota reached, plan limit, empty data) |
-| `401`  | `unauthorized`         | Missing, malformed, or revoked key                                   |
-| `403`  | `forbidden`            | Key not authorized for that form, or missing a required permission   |
-| `404`  | `not_found`            | Form or submission doesn't exist (or isn't yours)                    |
-| `429`  | `rate_limit_exceeded`  | Too many requests — retry after the header value                     |
-| `500`  | `server_error`         | Something went wrong on our end                                      |
+| Status | Code                  | Meaning                                                                            |
+| ------ | --------------------- | ---------------------------------------------------------------------------------- |
+| `400`  | `bad_request`         | Missing or invalid parameter (e.g. no `form_id`, a reserved field name)            |
+| `400`  | `submission_rejected` | The submission was refused — see `message` (quota reached, plan limit, empty data) |
+| `401`  | `unauthorized`        | Missing, malformed, or revoked key                                                 |
+| `403`  | `forbidden`           | Key not authorized for that form, or missing a required permission                 |
+| `404`  | `not_found`           | Form or submission doesn't exist (or isn't yours)                                  |
+| `429`  | `rate_limit_exceeded` | Too many requests — retry after the header value                                   |
+| `500`  | `server_error`        | Something went wrong on our end                                                    |
 
 `submission_rejected` carries the reason straight through, so show or log the `message`:
 
