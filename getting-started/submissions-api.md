@@ -50,7 +50,11 @@ Permissions are fixed for the life of a key. To change them, revoke the key and 
 
 ## Rate limits
 
-Requests are throttled at **20 requests/second** (burst 50) per account. Exceeding this returns `429` with a `Retry-After` header (in seconds).
+Read requests are limited to **1,000 requests/hour per API key**. Creating submissions uses the same per-form hourly submission limit as regular form submissions.
+
+The API also has a shared safety throttle of **20 requests/second** (burst 50) across all customers. This is not a per-account allowance.
+
+Exceeding a limit returns `429` with a `Retry-After` header (in seconds). Wait for that duration before retrying.
 
 ***
 
